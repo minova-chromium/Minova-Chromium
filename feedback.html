@@ -21,7 +21,7 @@
         <nav class="desktop-navigation" aria-label="Primary navigation"><a href="./index.html">Home</a><a href="./features.html">Features</a><a class="active" href="./feedback.html">Feedback</a></nav>
         <div class="header-actions">
           <a class="button subtle compact" data-repository-link href="#"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#github"></use></svg>Source</a>
-          <a class="button primary compact" data-release-link href="#"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#download"></use></svg>Download</a>
+          <a class="button primary compact" data-download-link href="https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.1/Minova-Chromium-Setup-1.0.1.exe"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#download"></use></svg>Download</a>
           <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open navigation"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#menu"></use></svg></button>
         </div>
       </div>
@@ -51,9 +51,9 @@
                 <input type="text" name="name" maxlength="80" autocomplete="name" />
               </label>
               <label class="field">
-                <span>Email address</span>
-                <input type="email" name="email" maxlength="254" autocomplete="email" required />
-                <small>Used only if the team needs more information.</small>
+                <span>Email address <small>(optional)</small></span>
+                <input type="email" name="email" maxlength="254" autocomplete="email" />
+                <small>Enter one only if you would like a reply.</small>
               </label>
             </div>
             <label class="field">
@@ -95,7 +95,7 @@
           <section class="aside-section">
             <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#shield-check"></use></svg>
             <h2>Sent to the Minova team</h2>
-            <p>Submissions are delivered to <strong>minova.chromium@gmail.com</strong>. Your email is used only to follow up on this report.</p>
+            <p>Submissions are delivered to <strong>minova.chromium@gmail.com</strong>. A contact email is optional and used only for replies.</p>
           </section>
           <section class="aside-section">
             <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#bug"></use></svg>

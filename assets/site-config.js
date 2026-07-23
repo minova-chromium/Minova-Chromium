@@ -6,5 +6,7 @@ window.MINOVA_SITE_CONFIG = Object.freeze({
   feedbackRecipient: "minova.chromium@gmail.com",
   currentVersion: "1.0.1",
   repositoryUrl: "https://github.com/minova-chromium/Minova-Chromium",
-  releasesUrl: "https://github.com/minova-chromium/Minova-Chromium/releases/latest"
+  releasesUrl: "https://github.com/minova-chromium/Minova-Chromium/releases/latest",
+  latestReleaseApiUrl: "https://api.github.com/repos/minova-chromium/Minova-Chromium/releases/latest",
+  latestInstallerUrl: "https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.1/Minova-Chromium-Setup-1.0.1.exe"
 });

@@ -41,24 +41,25 @@ async function submitToFirstParty(payload) {
 
 async function submitToRelay(payload) {
   const recipient = config.feedbackRecipient || "minova.chromium@gmail.com";
+  const message = {
+    name: payload.name || "Minova user",
+    type: payload.type === "feature" ? "Feature request" : "Bug report",
+    subject: payload.subject,
+    message: payload.description,
+    version: payload.appVersion,
+    platform: payload.platform || "Not provided",
+    _subject: `[Minova ${payload.type === "feature" ? "Feature Request" : "Bug Report"}] ${payload.subject}`,
+    _template: "table",
+    _honey: payload.website
+  };
+  if (payload.email) message.email = payload.email;
   const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
       accept: "application/json"
     },
-    body: JSON.stringify({
-      name: payload.name || "Minova user",
-      email: payload.email,
-      type: payload.type === "feature" ? "Feature request" : "Bug report",
-      subject: payload.subject,
-      message: payload.description,
-      version: payload.appVersion,
-      platform: payload.platform || "Not provided",
-      _subject: `[Minova ${payload.type === "feature" ? "Feature Request" : "Bug Report"}] ${payload.subject}`,
-      _template: "table",
-      _honey: payload.website
-    })
+    body: JSON.stringify(message)
   });
   const result = await response.json().catch(() => ({}));
   if (!response.ok || result.success === false) {
