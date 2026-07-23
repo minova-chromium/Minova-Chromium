@@ -1,56 +1,252 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minova Chromium - The Modern Custom Browser</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-    </style>
-</head>
-<body class="bg-gray-900 text-white selection:bg-blue-500 selection:text-white">
-    <!-- Navigation -->
-    <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-tight">Minova <span class="text-blue-500">Chromium</span></div>
-        <a href="https://github.com/minova-chromium/Minova-Chromium" class="text-gray-400 hover:text-white transition font-semibold">View Source on GitHub</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f1216" />
+    <meta name="description" content="Minova Chromium is a customizable, privacy-minded desktop browser with real Chromium browsing, encrypted passwords, extension support, media tools, and integrated Streaming Mode." />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src https:; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co" />
+    <meta property="og:title" content="Minova Chromium" />
+    <meta property="og:description" content="A Chromium browser that feels like yours." />
+    <meta property="og:image" content="https://minova-chromium.github.io/Minova-Chromium/assets/minova-browser.png" />
+    <meta property="og:type" content="website" />
+    <title>Minova Chromium | A browser that feels like yours</title>
+    <link rel="icon" href="./assets/minova-browser.png" />
+    <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/site-config.js" defer></script>
+    <script src="./assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-link" href="./index.html" aria-label="Minova Chromium home">
+          <img src="./assets/minova-browser.png" alt="" />
+          <span>Minova Chromium</span>
+        </a>
+        <nav class="desktop-navigation" aria-label="Primary navigation">
+          <a class="active" href="./index.html">Home</a>
+          <a href="./features.html">Features</a>
+          <a href="./feedback.html">Feedback</a>
+        </nav>
+        <div class="header-actions">
+          <a class="button subtle compact" data-repository-link href="https://github.com/minova-chromium/Minova-Chromium">
+            <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#github"></use></svg>
+            Source
+          </a>
+          <a class="button primary compact" data-release-link href="https://github.com/minova-chromium/Minova-Chromium/releases/latest">
+            <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#download"></use></svg>
+            Download
+          </a>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open navigation">
+            <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#menu"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-navigation" data-mobile-navigation aria-label="Mobile navigation">
+      <a class="active" href="./index.html">Home</a>
+      <a href="./features.html">Features</a>
+      <a href="./feedback.html">Feedback</a>
+      <a data-repository-link href="https://github.com/minova-chromium/Minova-Chromium">Source code</a>
     </nav>
 
-    <!-- Hero Section -->
-    <main class="container mx-auto px-6 py-24 text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
-            Browse <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Without Limits.</span>
-        </h1>
-        <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            A secure, fast, and fully customizable browser built on Castlabs Electron. Experience built-in streaming mode, smart tab suspension, and completely private local profiles.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://github.com/minova-chromium/Minova-Chromium/releases/latest" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg shadow-lg shadow-blue-500/30 transition transform hover:-translate-y-1">
-                Download for Windows
-            </a>
-            <a href="#features" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-lg transition">
-                Explore Features
-            </a>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="./assets/minova-new-tab.png" alt="" />
         </div>
+        <div class="hero-content">
+          <img class="hero-logo" src="./assets/minova-browser.png" alt="" />
+          <p class="eyebrow">Chromium, shaped around you</p>
+          <h1 id="hero-title">Minova Chromium</h1>
+          <p class="hero-copy">Fast everyday browsing, deep personalization, useful privacy controls, and protected streaming in one focused Windows browser.</p>
+          <div class="hero-actions">
+            <a class="button primary" data-release-link href="https://github.com/minova-chromium/Minova-Chromium/releases/latest">
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#download"></use></svg>
+              Download for Windows
+            </a>
+            <a class="button" href="./features.html">
+              Explore features
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+          <div class="hero-meta" aria-label="Release information">
+            <span><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#check"></use></svg>Version 1.0.1</span>
+            <span><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#shield-check"></use></svg>GPL-3.0 licensed</span>
+            <span><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#refresh"></use></svg>Background updates</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="Minova foundations">
+        <div class="section-inner proof-grid">
+          <div class="proof-item"><strong>Chromium 150</strong><span>Modern site compatibility</span></div>
+          <div class="proof-item"><strong>Windows</strong><span>Native desktop experience</span></div>
+          <div class="proof-item"><strong>Open source</strong><span>GPL-3.0-only</span></div>
+          <div class="proof-item"><strong>Local first</strong><span>Your browser data stays yours</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="personalize">
+        <div class="section-inner">
+          <div class="section-header" data-reveal>
+            <p class="eyebrow">Your browser, your palette</p>
+            <h2>Make every part of Minova feel like yours.</h2>
+            <p>Choose the background, toolbar, active controls, borders, text, accents, and warning colors. Try the live browser below.</p>
+          </div>
+          <div class="theme-lab" data-theme-lab data-reveal>
+            <div class="demo-browser" aria-label="Interactive Minova color preview">
+              <div class="demo-titlebar">
+                <div class="demo-tab">
+                  <img src="./assets/minova-browser.png" alt="" />
+                  <span>New Tab</span>
+                  <b aria-hidden="true">&times;</b>
+                </div>
+                <span class="demo-plus" aria-hidden="true">+</span>
+                <span class="demo-window-controls" aria-hidden="true"><i>−</i><i>□</i><i>×</i></span>
+              </div>
+              <div class="demo-toolbar">
+                <div class="demo-nav" aria-hidden="true"><span>‹</span><span>›</span><span>↻</span></div>
+                <div class="demo-omnibox">Search or enter web address</div>
+                <div class="demo-actions" aria-hidden="true"><span>☆</span><span>⋮</span></div>
+              </div>
+              <div class="demo-page">
+                <div class="demo-newtab">
+                  <img src="./assets/minova-browser.png" alt="" />
+                  <h3>Minova</h3>
+                  <div class="demo-search">Search the web</div>
+                  <div class="demo-shortcuts" aria-hidden="true">
+                    <span class="demo-shortcut"><i>G</i>Google</span>
+                    <span class="demo-shortcut"><i>Y</i>YouTube</span>
+                    <span class="demo-shortcut"><i>+</i>Add</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="theme-controls">
+              <div class="theme-control-heading">
+                <h3>Color studio</h3>
+                <strong data-theme-name>Minova</strong>
+              </div>
+              <div class="palette-presets" aria-label="Color presets">
+                <button class="palette-preset" type="button" data-palette="Minova" aria-label="Use Minova palette"><i class="preset-swatch swatch-minova"></i><span>Minova</span></button>
+                <button class="palette-preset" type="button" data-palette="Aurora" aria-label="Use Aurora palette"><i class="preset-swatch swatch-aurora"></i><span>Aurora</span></button>
+                <button class="palette-preset" type="button" data-palette="Crimson" aria-label="Use Crimson palette"><i class="preset-swatch swatch-crimson"></i><span>Crimson</span></button>
+                <button class="palette-preset" type="button" data-palette="Daylight" aria-label="Use Daylight palette"><i class="preset-swatch swatch-daylight"></i><span>Daylight</span></button>
+              </div>
+              <div class="color-controls">
+                <label class="color-control"><span>Background</span><input type="color" data-demo-color="background" aria-label="Background color" /></label>
+                <label class="color-control"><span>Toolbar and panels</span><input type="color" data-demo-color="panel" aria-label="Toolbar and panels color" /></label>
+                <label class="color-control"><span>Active controls</span><input type="color" data-demo-color="raised" aria-label="Active controls color" /></label>
+                <label class="color-control"><span>Borders</span><input type="color" data-demo-color="border" aria-label="Border color" /></label>
+                <label class="color-control"><span>Primary text</span><input type="color" data-demo-color="text" aria-label="Primary text color" /></label>
+                <label class="color-control"><span>Primary accent</span><input type="color" data-demo-color="accent" aria-label="Primary accent color" /></label>
+              </div>
+              <button class="button demo-control" type="button" data-theme-demo aria-pressed="false">
+                <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#play"></use></svg>
+                <span>Play color demo</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft">
+        <div class="section-inner feature-band" data-reveal>
+          <div class="feature-copy">
+            <p class="eyebrow">Personalization without guesswork</p>
+            <h2>Precise controls. Immediate results.</h2>
+            <p>Minova's Appearance settings mirror the browser itself, with live previews and exact hex values for every surface.</p>
+            <ul>
+              <li><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#check"></use></svg><span>System, light, dark, and fully custom modes</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#check"></use></svg><span>Nine independent interface colors</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#check"></use></svg><span>Persistent settings with one-click reset</span></li>
+            </ul>
+          </div>
+          <figure class="feature-media product-shot">
+            <img src="./assets/minova-appearance.png" alt="Minova Appearance settings showing custom color controls" />
+            <figcaption class="shot-caption"><strong>Appearance</strong><span>Captured from Minova 1.0.1</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-header centered" data-reveal>
+            <p class="eyebrow">More than a fresh coat of paint</p>
+            <h2>A serious browser for everyday work and play.</h2>
+            <p>Minova brings the tools people expect into a focused interface, then adds useful control where it matters.</p>
+          </div>
+          <div class="feature-grid" data-reveal>
+            <article class="feature-item">
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#stream"></use></svg>
+              <h3>Integrated Streaming Mode</h3>
+              <p>Keep Minova's tabs and controls while protected streaming uses a certified playback path.</p>
+              <a href="./features.html#media">Explore media tools <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#arrow-right"></use></svg></a>
+            </article>
+            <article class="feature-item">
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#lock"></use></svg>
+              <h3>Encrypted passwords</h3>
+              <p>Save site logins locally with Windows-backed encryption and practical account suggestions.</p>
+              <a href="./features.html#privacy">Explore privacy <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#arrow-right"></use></svg></a>
+            </article>
+            <article class="feature-item">
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#puzzle"></use></svg>
+              <h3>Extension support</h3>
+              <p>Load compatible Manifest V2 and V3 extensions with actions, popups, storage, and common APIs.</p>
+              <a href="./features.html#extensions">Explore extensions <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#arrow-right"></use></svg></a>
+            </article>
+            <article class="feature-item">
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#shield-check"></use></svg>
+              <h3>Built-in protection</h3>
+              <p>Block ads and trackers, control site permissions, and clear browsing data from one place.</p>
+              <a href="./features.html#privacy">Explore controls <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#arrow-right"></use></svg></a>
+            </article>
+            <article class="feature-item">
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#picture-in-picture"></use></svg>
+              <h3>Media that follows you</h3>
+              <p>Pop video out above other apps, boost quiet audio, and keep playback within reach.</p>
+              <a href="./features.html#media">Explore media tools <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#arrow-right"></use></svg></a>
+            </article>
+            <article class="feature-item">
+              <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#gauge"></use></svg>
+              <h3>Smart tab suspension</h3>
+              <p>Reduce idle resource use without suspending downloads, media, unsaved forms, or pinned tabs.</p>
+              <a href="./features.html#performance">Explore performance <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#arrow-right"></use></svg></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-band">
+        <div class="section-inner download-inner" data-reveal>
+          <div class="download-copy">
+            <p class="eyebrow">Minova 1.0.1</p>
+            <h2>Ready to make the web yours?</h2>
+            <p>Download Minova for Windows or inspect every line of the GPL-licensed source.</p>
+          </div>
+          <div class="download-actions">
+            <a class="button primary" data-release-link href="https://github.com/minova-chromium/Minova-Chromium/releases/latest"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#download"></use></svg>Download Minova</a>
+            <a class="button" data-repository-link href="https://github.com/minova-chromium/Minova-Chromium"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#github"></use></svg>View source</a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Feature Grid Section -->
-    <section id="features" class="container mx-auto px-6 py-20 border-t border-gray-800">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-8 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-gray-600 transition">
-                <h3 class="text-xl font-bold mb-3 text-blue-400">Smart Tab Suspension</h3>
-                <p class="text-gray-400 leading-relaxed">Automatically suspends background tabs to save RAM, with smart exclusions for active media and unsubmitted forms.</p>
-            </div>
-            <div class="p-8 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-gray-600 transition">
-                <h3 class="text-xl font-bold mb-3 text-purple-400">Certified Streaming Mode</h3>
-                <p class="text-gray-400 leading-relaxed">Integrated DRM playback engine designed specifically to handle high-resolution streaming seamlessly.</p>
-            </div>
-            <div class="p-8 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-gray-600 transition">
-                <h3 class="text-xl font-bold mb-3 text-green-400">Seamless Auto-Updates</h3>
-                <p class="text-gray-400 leading-relaxed">Stays up to date effortlessly in the background, pulling the latest secure releases directly from GitHub.</p>
-            </div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand-link" href="./index.html"><img src="./assets/minova-browser.png" alt="" /><span>Minova Chromium</span></a>
+            <p>A customizable, privacy-minded Chromium desktop browser built in the open.</p>
+          </div>
+          <div class="footer-column"><strong>Explore</strong><a href="./features.html">Features</a><a href="./index.html#personalize">Color studio</a><a data-release-link href="#">Releases</a></div>
+          <div class="footer-column"><strong>Project</strong><a data-repository-link href="#">Source code</a><a href="./feedback.html?type=bug">Report a bug</a><a href="./feedback.html?type=feature">Request a feature</a></div>
+          <div class="footer-column"><strong>Legal</strong><a data-repository-link href="#">GPL-3.0 license</a><a href="mailto:minova.chromium@gmail.com">Contact</a></div>
         </div>
-    </section>
-</body>
+        <div class="footer-bottom"><span>&copy; <span data-current-year></span> Minova Chromium.</span><span>Windows is a trademark of Microsoft Corporation. Minova is an independent project.</span></div>
+      </div>
+    </footer>
+  </body>
 </html>

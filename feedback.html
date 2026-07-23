@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f1216" />
+    <meta name="description" content="Report a Minova Chromium bug or send the team a feature suggestion." />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src https:; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co" />
+    <title>Feedback | Minova Chromium</title>
+    <link rel="icon" href="./assets/minova-browser.png" />
+    <link rel="stylesheet" href="./assets/site.css" />
+    <script src="./assets/site-config.js" defer></script>
+    <script src="./assets/site.js" defer></script>
+    <script src="./assets/feedback.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-link" href="./index.html" aria-label="Minova Chromium home"><img src="./assets/minova-browser.png" alt="" /><span>Minova Chromium</span></a>
+        <nav class="desktop-navigation" aria-label="Primary navigation"><a href="./index.html">Home</a><a href="./features.html">Features</a><a class="active" href="./feedback.html">Feedback</a></nav>
+        <div class="header-actions">
+          <a class="button subtle compact" data-repository-link href="#"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#github"></use></svg>Source</a>
+          <a class="button primary compact" data-release-link href="#"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#download"></use></svg>Download</a>
+          <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open navigation"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#menu"></use></svg></button>
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-navigation" data-mobile-navigation aria-label="Mobile navigation"><a href="./index.html">Home</a><a href="./features.html">Features</a><a class="active" href="./feedback.html">Feedback</a><a data-repository-link href="#">Source code</a></nav>
+
+    <main class="feedback-main" id="main">
+      <section class="feedback-intro">
+        <div class="section-inner">
+          <p class="eyebrow">Help shape Minova</p>
+          <h1>Feedback</h1>
+          <p>Found something that needs attention, or have an idea that would make Minova better? Send it directly to the project team.</p>
+        </div>
+      </section>
+
+      <section class="section-inner feedback-layout">
+        <div class="feedback-form-shell">
+          <div class="feedback-type" role="group" aria-label="Feedback type">
+            <button class="active" type="button" data-feedback-type="bug" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#bug"></use></svg>Report a bug</button>
+            <button type="button" data-feedback-type="feature" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#lightbulb"></use></svg>Suggest a feature</button>
+          </div>
+          <form class="public-feedback-form" id="publicFeedbackForm" novalidate>
+            <input type="hidden" id="feedbackType" name="type" value="bug" />
+            <div class="form-grid">
+              <label class="field">
+                <span>Your name <small>(optional)</small></span>
+                <input type="text" name="name" maxlength="80" autocomplete="name" />
+              </label>
+              <label class="field">
+                <span>Email address</span>
+                <input type="email" name="email" maxlength="254" autocomplete="email" required />
+                <small>Used only if the team needs more information.</small>
+              </label>
+            </div>
+            <label class="field">
+              <span>Subject</span>
+              <input id="feedbackSubject" type="text" name="subject" minlength="3" maxlength="120" placeholder="What went wrong?" required />
+            </label>
+            <label class="field">
+              <span>Description</span>
+              <textarea id="feedbackDescription" name="description" minlength="20" maxlength="5000" placeholder="Tell us what happened, what you expected, and how we can reproduce it." required></textarea>
+              <small class="field-meta"><span>Include the page or steps involved when relevant.</span><span><output id="feedbackCount">0</output> / 5,000</span></small>
+            </label>
+            <div class="form-grid">
+              <label class="field">
+                <span>Minova version</span>
+                <input type="text" name="appVersion" value="1.0.1" maxlength="40" />
+              </label>
+              <label class="field">
+                <span>Platform <small>(optional)</small></span>
+                <select name="platform">
+                  <option value="">Choose a platform</option>
+                  <option value="Windows 11">Windows 11</option>
+                  <option value="Windows 10">Windows 10</option>
+                  <option value="Other Windows">Other Windows</option>
+                </select>
+              </label>
+            </div>
+            <label class="honeypot" aria-hidden="true"><span>Website</span><input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            <div class="form-footer">
+              <p class="form-status" id="feedbackStatus" aria-live="polite"></p>
+              <button class="button primary" id="feedbackSubmit" type="submit">
+                <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#arrow-right"></use></svg>
+                Send feedback
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="feedback-aside" aria-label="Feedback information">
+          <section class="aside-section">
+            <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#shield-check"></use></svg>
+            <h2>Sent to the Minova team</h2>
+            <p>Submissions are delivered to <strong>minova.chromium@gmail.com</strong>. Your email is used only to follow up on this report.</p>
+          </section>
+          <section class="aside-section">
+            <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#bug"></use></svg>
+            <h2>A useful bug report</h2>
+            <p>Include the page, the action you took, what happened, and what you expected. Exact steps make fixes much faster.</p>
+          </section>
+          <section class="aside-section">
+            <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#github"></use></svg>
+            <h2>Prefer GitHub?</h2>
+            <p>You can also inspect the source and follow public development in the project repository.</p>
+            <a data-repository-link href="#">Open the repository</a>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand"><a class="brand-link" href="./index.html"><img src="./assets/minova-browser.png" alt="" /><span>Minova Chromium</span></a><p>A customizable, privacy-minded Chromium desktop browser built in the open.</p></div>
+          <div class="footer-column"><strong>Explore</strong><a href="./features.html">Features</a><a href="./index.html#personalize">Color studio</a><a data-release-link href="#">Releases</a></div>
+          <div class="footer-column"><strong>Project</strong><a data-repository-link href="#">Source code</a><a href="./feedback.html?type=bug">Report a bug</a><a href="./feedback.html?type=feature">Request a feature</a></div>
+          <div class="footer-column"><strong>Legal</strong><a data-repository-link href="#">GPL-3.0 license</a><a href="mailto:minova.chromium@gmail.com">Contact</a></div>
+        </div>
+        <div class="footer-bottom"><span>&copy; <span data-current-year></span> Minova Chromium.</span><span>Windows is a trademark of Microsoft Corporation. Minova is an independent project.</span></div>
+      </div>
+    </footer>
+  </body>
+</html>

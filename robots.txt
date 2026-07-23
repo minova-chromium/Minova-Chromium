@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minova-chromium.github.io/Minova-Chromium/sitemap.xml
