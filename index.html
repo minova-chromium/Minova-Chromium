@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minova Chromium - The Modern Custom Browser</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white selection:bg-blue-500 selection:text-white">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tight">Minova <span class="text-blue-500">Chromium</span></div>
+        <a href="https://github.com/minova-chromium/Minova-Chromium" class="text-gray-400 hover:text-white transition font-semibold">View Source on GitHub</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-6 py-24 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+            Browse <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Without Limits.</span>
+        </h1>
+        <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            A secure, fast, and fully customizable browser built on Castlabs Electron. Experience built-in streaming mode, smart tab suspension, and completely private local profiles.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="https://github.com/minova-chromium/Minova-Chromium/releases/latest" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg shadow-lg shadow-blue-500/30 transition transform hover:-translate-y-1">
+                Download for Windows
+            </a>
+            <a href="#features" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-lg transition">
+                Explore Features
+            </a>
+        </div>
+    </main>
+
+    <!-- Feature Grid Section -->
+    <section id="features" class="container mx-auto px-6 py-20 border-t border-gray-800">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-gray-600 transition">
+                <h3 class="text-xl font-bold mb-3 text-blue-400">Smart Tab Suspension</h3>
+                <p class="text-gray-400 leading-relaxed">Automatically suspends background tabs to save RAM, with smart exclusions for active media and unsubmitted forms.</p>
+            </div>
+            <div class="p-8 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-gray-600 transition">
+                <h3 class="text-xl font-bold mb-3 text-purple-400">Certified Streaming Mode</h3>
+                <p class="text-gray-400 leading-relaxed">Integrated DRM playback engine designed specifically to handle high-resolution streaming seamlessly.</p>
+            </div>
+            <div class="p-8 bg-gray-800/50 rounded-2xl border border-gray-700 hover:border-gray-600 transition">
+                <h3 class="text-xl font-bold mb-3 text-green-400">Seamless Auto-Updates</h3>
+                <p class="text-gray-400 leading-relaxed">Stays up to date effortlessly in the background, pulling the latest secure releases directly from GitHub.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
