@@ -10,6 +10,7 @@
     <link rel="icon" href="./assets/minova-browser.png" />
     <link rel="stylesheet" href="./assets/site.css" />
     <script src="./assets/site-config.js" defer></script>
+    <script src="./assets/releases.js" defer></script>
     <script src="./assets/site.js" defer></script>
     <script src="./assets/feedback.js" defer></script>
   </head>
@@ -18,15 +19,15 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="brand-link" href="./index.html" aria-label="Minova Chromium home"><img src="./assets/minova-browser.png" alt="" /><span>Minova Chromium</span></a>
-        <nav class="desktop-navigation" aria-label="Primary navigation"><a href="./index.html">Home</a><a href="./features.html">Features</a><a class="active" href="./feedback.html">Feedback</a></nav>
+        <nav class="desktop-navigation" aria-label="Primary navigation"><a href="./index.html">Home</a><a href="./features.html">Features</a><a href="./releases.html">Releases</a><a class="active" href="./feedback.html">Feedback</a></nav>
         <div class="header-actions">
           <a class="button subtle compact" data-repository-link href="#"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#github"></use></svg>Source</a>
-          <a class="button primary compact" data-download-link href="https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.1/Minova-Chromium-Setup-1.0.1.exe"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#download"></use></svg>Download</a>
+          <a class="button primary compact" data-download-link href="https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.2/Minova-Chromium-Setup-1.0.2.exe"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#download"></use></svg>Download</a>
           <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Open navigation"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#menu"></use></svg></button>
         </div>
       </div>
     </header>
-    <nav class="mobile-navigation" data-mobile-navigation aria-label="Mobile navigation"><a href="./index.html">Home</a><a href="./features.html">Features</a><a class="active" href="./feedback.html">Feedback</a><a data-repository-link href="#">Source code</a></nav>
+    <nav class="mobile-navigation" data-mobile-navigation aria-label="Mobile navigation"><a href="./index.html">Home</a><a href="./features.html">Features</a><a href="./releases.html">Releases</a><a class="active" href="./feedback.html">Feedback</a><a data-repository-link href="#">Source code</a></nav>
 
     <main class="feedback-main" id="main">
       <section class="feedback-intro">
@@ -68,7 +69,7 @@
             <div class="form-grid">
               <label class="field">
                 <span>Minova version</span>
-                <input type="text" name="appVersion" value="1.0.1" maxlength="40" />
+                <input type="text" name="appVersion" value="1.0.2" maxlength="40" data-release-version-input />
               </label>
               <label class="field">
                 <span>Platform <small>(optional)</small></span>
@@ -116,7 +117,7 @@
       <div class="footer-inner">
         <div class="footer-top">
           <div class="footer-brand"><a class="brand-link" href="./index.html"><img src="./assets/minova-browser.png" alt="" /><span>Minova Chromium</span></a><p>A customizable, privacy-minded Chromium desktop browser built in the open.</p></div>
-          <div class="footer-column"><strong>Explore</strong><a href="./features.html">Features</a><a href="./index.html#personalize">Color studio</a><a data-release-link href="#">Releases</a></div>
+          <div class="footer-column"><strong>Explore</strong><a href="./features.html">Features</a><a href="./index.html#personalize">Color studio</a><a data-release-link href="./releases.html">Releases</a></div>
           <div class="footer-column"><strong>Project</strong><a data-repository-link href="#">Source code</a><a href="./feedback.html?type=bug">Report a bug</a><a href="./feedback.html?type=feature">Request a feature</a></div>
           <div class="footer-column"><strong>Legal</strong><a data-repository-link href="#">GPL-3.0 license</a><a href="mailto:minova.chromium@gmail.com">Contact</a></div>
         </div>

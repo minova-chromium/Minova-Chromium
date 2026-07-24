@@ -4,9 +4,12 @@ window.MINOVA_SITE_CONFIG = Object.freeze({
   // feedbackEndpoint: "https://feedback.minova.example/v1/feedback"
   feedbackEndpoint: "",
   feedbackRecipient: "minova.chromium@gmail.com",
-  currentVersion: "1.0.1",
+  currentVersion: "1.0.2",
   repositoryUrl: "https://github.com/minova-chromium/Minova-Chromium",
   releasesUrl: "https://github.com/minova-chromium/Minova-Chromium/releases/latest",
+  releasePageUrl: "./releases.html",
+  releasesApiUrl: "https://api.github.com/repos/minova-chromium/Minova-Chromium/releases?per_page=20",
   latestReleaseApiUrl: "https://api.github.com/repos/minova-chromium/Minova-Chromium/releases/latest",
-  latestInstallerUrl: "https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.1/Minova-Chromium-Setup-1.0.1.exe"
+  latestInstallerUrl: "https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.2/Minova-Chromium-Setup-1.0.2.exe",
+  releasePollIntervalMs: 300000
 });

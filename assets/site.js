@@ -9,43 +9,14 @@ const year = document.querySelector("[data-current-year]");
 if (year) year.textContent = String(new Date().getFullYear());
 
 document.querySelectorAll("[data-release-link]").forEach((link) => {
+  link.href = config.releasePageUrl || "./releases.html";
+});
+document.querySelectorAll("[data-github-release-link]").forEach((link) => {
   link.href = config.releasesUrl || "https://github.com/minova-chromium/Minova-Chromium/releases/latest";
 });
 document.querySelectorAll("[data-repository-link]").forEach((link) => {
   link.href = config.repositoryUrl || "https://github.com/minova-chromium/Minova-Chromium";
 });
-
-const downloadLinks = Array.from(document.querySelectorAll("[data-download-link]"));
-const fallbackInstallerUrl = config.latestInstallerUrl
-  || "https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.1/Minova-Chromium-Setup-1.0.1.exe";
-
-function setInstallerUrl(url) {
-  downloadLinks.forEach((link) => {
-    link.href = url;
-    link.setAttribute("data-installer-ready", "true");
-  });
-}
-
-setInstallerUrl(fallbackInstallerUrl);
-
-if (downloadLinks.length) {
-  fetch(config.latestReleaseApiUrl || "https://api.github.com/repos/minova-chromium/Minova-Chromium/releases/latest", {
-    headers: { accept: "application/vnd.github+json" }
-  })
-    .then((response) => {
-      if (!response.ok) throw new Error("Latest release lookup failed.");
-      return response.json();
-    })
-    .then((release) => {
-      const installer = Array.isArray(release.assets)
-        ? release.assets.find((asset) => /\.exe$/i.test(String(asset.name || "")) && asset.browser_download_url)
-        : null;
-      if (installer) setInstallerUrl(installer.browser_download_url);
-    })
-    .catch(() => {
-      // The current signed installer remains available when GitHub's API is unavailable.
-    });
-}
 
 if (menuButton && mobileNavigation) {
   menuButton.addEventListener("click", () => {
