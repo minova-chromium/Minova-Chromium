@@ -24,7 +24,7 @@ Then open `http://127.0.0.1:4173/`.
 
 The site checks for fresh release data when a page opens and every five minutes
 while it remains visible. The most recent successful response is cached in the
-browser, and version `1.0.2` remains as a static fallback if GitHub is temporarily
+browser, and version `1.0.3` remains as a static fallback if GitHub is temporarily
 unavailable. Publishing a new non-draft GitHub Release with a
 `Minova-Chromium-Setup-<version>.exe` asset does not require another website
 deployment.

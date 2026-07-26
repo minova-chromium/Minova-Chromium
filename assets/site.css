@@ -448,6 +448,24 @@ textarea {
   min-width: 0;
 }
 
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.text-link:hover {
+  color: #57ddd6;
+}
+
+.text-link .icon {
+  width: 15px;
+  height: 15px;
+}
+
 .feature-copy ul,
 .detail-list {
   display: grid;
