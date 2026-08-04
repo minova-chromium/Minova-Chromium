@@ -40,7 +40,7 @@
 
       <nav class="feature-index" aria-label="Feature categories">
         <div class="section-inner">
-          <a href="#browsing">Browsing</a><a href="#interface">Interface</a><a href="#personalization">Personalization</a><a href="#privacy">Privacy</a><a href="#extensions">Extensions</a><a href="#media">Media</a><a href="#performance">Performance</a>
+          <a href="#browsing">Browsing</a><a href="#interface">Interface</a><a href="#personalization">Personalization</a><a href="#privacy">Privacy</a><a href="#extensions">Extensions</a><a href="#assistant">AI Assistant</a><a href="#audio-studio">Audio Studio</a><a href="#media">Media</a><a href="#performance">Performance</a>
         </div>
       </nav>
 
@@ -127,6 +127,50 @@
         </div>
       </section>
 
+      <section class="section soft capability-section" id="assistant">
+        <div class="section-inner">
+          <div class="capability-heading" data-reveal>
+            <span class="capability-icon"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#sparkles"></use></svg></span>
+            <div><h2>Minova Assistant</h2><p>A private, page-aware assistant that runs through WebGPU on your own computer. Page text and conversations are processed locally instead of being sent to an AI service.</p></div>
+          </div>
+          <div class="capability-grid" data-reveal>
+            <article class="capability"><h3>Local model and offline cache</h3><p>The model downloads once, is stored in Minova's isolated IndexedDB partition, and can keep working offline after setup. WebGPU provides hardware acceleration without Ollama or another background application.</p></article>
+            <article class="capability"><h3>Page-aware conversation</h3><p>Enable <strong>Use page</strong> to ask grounded questions about the active webpage. Minova bounds and sanitizes the reference so page instructions cannot take control of the assistant.</p></article>
+            <article class="capability"><h3>Research tools</h3><p>Summarize a page, extract key points and action items, build an outline, identify useful structured data, or analyze claims against the evidence actually present on the page.</p></article>
+            <article class="capability"><h3>Writing tools</h3><p>Select text on a webpage to explain, simplify, rewrite, or proofread it. Minova can also draft a concise reply while avoiding invented personal details.</p></article>
+            <article class="capability"><h3>Study tools</h3><p>Turn long reading into a structured study guide or a five-question quiz with an answer key, all grounded in the active page.</p></article>
+            <article class="capability"><h3>Split View comparison</h3><p>Open two normal webpages in Split View and choose <strong>Compare tabs</strong>. The assistant highlights common ground, differences, contradictions, and unique details from both pages.</p></article>
+          </div>
+          <div class="help-walkthrough" data-reveal>
+            <div><p class="eyebrow">Getting started</p><h3>Use the sparkle button in Minova's toolbar.</h3></div>
+            <ol><li>Open a webpage, then open Minova Assistant.</li><li>Choose a page tool or enable <strong>Use page</strong> for follow-up questions.</li><li>Select text before using selection tools such as Proofread or Draft reply.</li><li>Open <strong>More tools</strong> for study, research, writing, and Split View actions.</li></ol>
+            <p><strong>Privacy note:</strong> Normal conversations are saved locally for continuity. Conversations started from a private tab are kept out of persistent assistant history.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section capability-section" id="audio-studio">
+        <div class="section-inner">
+          <div class="capability-heading" data-reveal>
+            <span class="capability-icon"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#gauge"></use></svg></span>
+            <div><h2>Minova Audio Studio</h2><p>Per-tab volume, transparent loudness control, and detailed tone shaping in one toolbar panel. Settings follow compatible HTML audio and video without altering the original media file.</p></div>
+          </div>
+          <div class="capability-grid" data-reveal>
+            <article class="capability"><h3>Tab volume</h3><p>Raise compatible media from 100% to 300% for unusually quiet sources. Start low and increase gradually to protect your hearing and speakers.</p></article>
+            <article class="capability"><h3>Dynamic normalizer</h3><p>The compressor reduces harsh volume jumps. Threshold decides when it works; ratio controls strength; knee smooths the transition; attack and release control how quickly it reacts and recovers.</p></article>
+            <article class="capability"><h3>Ten-band parametric EQ</h3><p>Each band exposes frequency, gain, and Q. Frequency chooses the tone, gain boosts or cuts it, and Q controls whether the adjustment is broad or narrow.</p></article>
+            <article class="capability"><h3>Automatic headroom</h3><p>Auto headroom lowers the preamp when EQ boosts could clip. The safety margin adds extra protection, while Output provides a deliberate final level adjustment.</p></article>
+            <article class="capability"><h3>Presets</h3><p>Start with Flat, Bass Boost, Vocal Clarity, or Night Mode. Name and save custom settings, update them later, or delete presets you no longer need.</p></article>
+            <article class="capability"><h3>Efficient by design</h3><p>The AudioContext follows playback and suspends while media is idle. Audio Studio reports active sources, compressor reduction, unavailable players, and protected-media limitations.</p></article>
+          </div>
+          <div class="help-walkthrough" data-reveal>
+            <div><p class="eyebrow">Getting started</p><h3>Open the speaker control beside the address bar.</h3></div>
+            <ol><li>Play audio or video in the active tab.</li><li>Choose a preset or enable the Normalizer and EQ separately.</li><li>Keep Auto headroom enabled when boosting EQ bands.</li><li>Save the finished curve as a named preset for later use.</li></ol>
+            <p><strong>Compatibility:</strong> Some protected or cross-origin players do not expose their audio graph. Streaming Mode uses the certified playback path and therefore cannot be processed by Minova Audio Studio.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="section soft capability-section" id="media">
         <div class="section-inner">
           <div class="capability-heading" data-reveal>
@@ -137,7 +181,7 @@
             <article class="capability"><h3>Integrated Streaming Mode</h3><p>Protected services can use the installed Microsoft-signed Edge playback path while Minova's tabs and toolbar remain attached.</p></article>
             <article class="capability"><h3>Streaming service detection</h3><p>Minova recognizes major services and can suggest Streaming Mode when direct protected playback is unavailable.</p></article>
             <article class="capability"><h3>Always-on-top video</h3><p>Pop compatible media into a compact window that stays visible over games and other applications.</p></article>
-            <article class="capability"><h3>Built-in volume boost</h3><p>Raise quiet media beyond its normal page volume from Minova's toolbar controls.</p></article>
+            <article class="capability"><h3>Audio Studio</h3><p>Normalize loudness, shape ten parametric EQ bands, protect boosted curves with automatic headroom, and save custom presets directly from Minova's toolbar.</p></article>
             <article class="capability"><h3>Media-aware tabs</h3><p>Tab state tracks active audio and video so media remains visible and is not suspended unexpectedly.</p></article>
             <article class="capability"><h3>Site favicons</h3><p>Tabs display each site's real icon, making YouTube, Netflix, Steam, and everyday pages easy to distinguish.</p></article>
           </div>
