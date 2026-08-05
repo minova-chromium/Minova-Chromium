@@ -2,6 +2,9 @@
 
 This folder is the static GitHub Pages site for Minova Chromium.
 
+`videos.html` is the permanent release-film archive. Add each new versioned
+promo video, poster, and optional caption track without removing older films.
+
 ## Local preview
 
 From the repository root:
