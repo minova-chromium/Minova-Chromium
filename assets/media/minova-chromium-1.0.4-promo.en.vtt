@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.200 --> 00:00:09.914
+Meet Minova Chromium 1.0.4. This release brings private local intelligence and precise audio control directly into your browser.
+
+00:00:09.614 --> 00:00:22.376
+The Minova Assistant runs locally with WebLLM and WebGPU. Ask questions, summarize the page, or explain selected text without sending prompts to a cloud AI service.
+
+00:00:22.076 --> 00:00:35.822
+Choose from focused page tools for key points, action items, study guides, quizzes, outlines, claim analysis, structured data, writing help, and even Split View comparisons.
+
+00:00:35.522 --> 00:00:48.164
+The model downloads once, stays cached for offline use, and runs on your hardware. Long pages are compacted automatically so useful summaries keep working without context-window errors.
+
+00:00:47.864 --> 00:01:00.626
+The volume button now opens Minova Audio Studio. Boost quiet media, smooth sudden level changes, and tune a ten-band parametric equalizer with automatic clipping headroom.
+
+00:01:00.326 --> 00:01:13.640
+Version 1.0.4 also repairs the native window controls, restores the compact Classic titlebar, keeps the new-tab button beside your tabs, and preserves Streaming Mode alignment.
+
+00:01:13.340 --> 00:01:24.446
+New help buttons take you directly to complete Assistant and Audio Studio guides, including setup, controls, compatibility, privacy, and troubleshooting.
+
+00:01:24.146 --> 00:01:32.756
+Private. Personal. Built for focus. Minova Chromium 1.0.4. Browse your way.

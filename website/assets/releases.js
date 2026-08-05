@@ -4,9 +4,9 @@ const releaseConfig = window.MINOVA_SITE_CONFIG || {};
 const releaseDownloadLinks = Array.from(document.querySelectorAll("[data-download-link]"));
 const releaseList = document.querySelector("[data-release-list]");
 const releaseStatus = document.querySelector("[data-release-status]");
-const fallbackVersion = releaseConfig.currentVersion || "1.0.3";
+const fallbackVersion = releaseConfig.currentVersion || "1.0.4";
 const fallbackInstallerUrl = releaseConfig.latestInstallerUrl
-  || "https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.3/Minova-Chromium-Setup-1.0.3.exe";
+  || "https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.4/Minova-Chromium-Setup-1.0.4.exe";
 const releasesApiUrl = releaseConfig.releasesApiUrl
   || "https://api.github.com/repos/minova-chromium/Minova-Chromium/releases?per_page=20";
 const releaseCacheKey = "minova-public-releases-v1";
