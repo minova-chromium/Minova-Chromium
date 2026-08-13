@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Minova orbital line pattern">
+  <defs>
+    <linearGradient id="line" x1="80" y1="760" x2="1490" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1769ff" stop-opacity=".18"/>
+      <stop offset=".55" stop-color="#16d8e4" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#24d3b5" stop-opacity=".12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#0d121a"/>
+  <g fill="none" stroke="url(#line)" stroke-width="3">
+    <path d="M-180 630C160 190 1000 55 1780 280"/>
+    <path d="M-120 730C310 340 990 225 1720 400"/>
+    <path d="M160 1040C390 520 1000 70 1440-170"/>
+    <path d="M430 1030C640 560 1110 210 1580 20"/>
+  </g>
+</svg>
+

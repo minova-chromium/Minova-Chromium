@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" role="img" aria-label="Editable Minova social banner template">
+  <defs>
+    <linearGradient id="orbit" x1="90" y1="440" x2="1450" y2="45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1769ff"/>
+      <stop offset=".55" stop-color="#16d8e4"/>
+      <stop offset="1" stop-color="#24d3b5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1500" height="500" fill="#0d121a"/>
+  <g fill="none" stroke="url(#orbit)" stroke-width="3" opacity=".3">
+    <path d="M-120 420C260 60 970 10 1600 210"/>
+    <path d="M90 620C380 250 1030 80 1570 130"/>
+  </g>
+  <image href="../assets/minova-lockup-dark.svg" x="82" y="92" width="720" height="204"/>
+  <text x="478" y="304" fill="#a7b5c5" font-family="Segoe UI, sans-serif" font-size="34">Shape your own path.</text>
+  <text x="480" y="362" fill="#16d8e4" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700">PRIVATE / PERSONAL / POWERFUL</text>
+</svg>

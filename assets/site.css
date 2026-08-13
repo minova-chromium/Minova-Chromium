@@ -706,6 +706,209 @@ textarea {
   height: auto;
 }
 
+.brand-lockup-shot {
+  min-height: 330px;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: clamp(32px, 5vw, 70px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #111b28;
+}
+
+.brand-lockup-shot img {
+  width: min(100%, 860px);
+}
+
+.brand-page-hero {
+  position: relative;
+  min-height: 650px;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: #0b1119;
+}
+
+.brand-page-pattern {
+  position: absolute;
+  inset: 0;
+  background: url("./brand/minova-orbit-pattern.svg") center / cover;
+  opacity: 0.52;
+}
+
+.brand-page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 11, 16, 0.32);
+}
+
+.brand-page-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-block: 90px;
+}
+
+.brand-page-lockup {
+  width: min(760px, 82vw);
+  margin: 26px 0 38px;
+}
+
+.brand-page-hero h1 {
+  margin: 0;
+  font-family: Bahnschrift, "Segoe UI Variable Display", "Segoe UI", sans-serif;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1;
+}
+
+.brand-page-hero-inner > p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 24px 0 0;
+  color: #c5d0dc;
+  font-size: 19px;
+}
+
+.brand-foundations {
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--surface);
+}
+
+.brand-foundation-grid {
+  min-height: 86px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.brand-foundation-grid > div {
+  display: grid;
+  align-content: center;
+  padding: 16px 24px;
+  border-right: 1px solid var(--line-soft);
+}
+
+.brand-foundation-grid > div:first-child { padding-left: 0; }
+.brand-foundation-grid > div:last-child { border-right: 0; }
+
+.brand-foundation-grid strong { font-size: 14px; }
+.brand-foundation-grid span { margin-top: 3px; color: var(--muted); font-size: 12px; }
+
+.brand-showcase,
+.brand-wordmark-layout,
+.brand-kit-layout {
+  display: grid;
+  grid-template-columns: minmax(380px, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 120px);
+}
+
+.brand-symbol-stage,
+.brand-wordmark-stage {
+  min-height: 440px;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 56px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #111b28;
+}
+
+.brand-symbol-stage img { width: min(100%, 390px); }
+.brand-wordmark-stage img { width: min(100%, 760px); }
+
+.brand-showcase-copy h2,
+.brand-wordmark-layout h2,
+.brand-kit-layout h2 {
+  margin: 0;
+  font-size: clamp(36px, 4.5vw, 58px);
+  line-height: 1.06;
+}
+
+.brand-showcase-copy > p:not(.eyebrow),
+.brand-wordmark-layout p,
+.brand-kit-layout p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.brand-showcase-copy ul {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.brand-showcase-copy li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.brand-showcase-copy li .icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  color: var(--accent);
+}
+
+.brand-wordmark-layout {
+  grid-template-columns: minmax(0, 0.7fr) minmax(520px, 1.3fr);
+}
+
+.brand-color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.brand-color-grid > div {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #0d121a;
+  color: #f7fafc;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.brand-color-grid span { font-weight: 700; }
+.brand-color-grid code { margin-top: 5px; color: rgba(247, 250, 252, 0.78); }
+.brand-color-grid .brand-swatch-night { background: #0d121a; }
+.brand-color-grid .brand-swatch-surface { background: #17202c; }
+.brand-color-grid .brand-swatch-cobalt { background: #1769ff; }
+.brand-color-grid .brand-swatch-blue { background: #0798f2; }
+.brand-color-grid .brand-swatch-cyan { background: #16aeba; color: #061214; text-shadow: none; }
+.brand-color-grid .brand-swatch-cyan code,
+.brand-color-grid .brand-swatch-teal code { color: rgba(6, 18, 20, 0.76); }
+.brand-color-grid .brand-swatch-teal { background: #24d3b5; color: #061214; text-shadow: none; }
+
+.brand-kit-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.78fr);
+}
+
+.brand-kit-list {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.brand-kit-list > div {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand-kit-list dt { font-weight: 700; }
+.brand-kit-list dd { margin: 0; color: var(--muted); }
+
 .shot-caption {
   min-height: 48px;
   display: flex;
@@ -1804,6 +2007,9 @@ textarea {
 
   .feature-band,
   .feature-band.reverse,
+  .brand-showcase,
+  .brand-wordmark-layout,
+  .brand-kit-layout,
   .theme-lab,
   .feedback-layout,
   .release-summary-inner,
@@ -1811,6 +2017,18 @@ textarea {
   .video-library-header,
   .release-film {
     grid-template-columns: 1fr;
+  }
+
+  .brand-foundation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brand-foundation-grid > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .brand-foundation-grid > div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line-soft);
   }
 
   .release-film-media {
@@ -1905,6 +2123,42 @@ textarea {
     height: 58px;
     margin-bottom: 18px;
     border-radius: 13px;
+  }
+
+  .brand-page-hero {
+    min-height: 560px;
+  }
+
+  .brand-page-hero-inner {
+    padding-block: 68px;
+  }
+
+  .brand-page-lockup {
+    width: 100%;
+    margin-block: 24px 34px;
+  }
+
+  .brand-foundation-grid,
+  .brand-color-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-foundation-grid > div {
+    padding-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .brand-symbol-stage,
+  .brand-wordmark-stage,
+  .brand-lockup-shot {
+    min-height: 260px;
+    padding: 30px;
+  }
+
+  .brand-kit-list > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .hero h1 {

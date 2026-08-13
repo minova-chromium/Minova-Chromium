@@ -1,0 +1,39 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "brand": {
+    "color": {
+      "night950": { "$type": "color", "$value": "#080c12" },
+      "night900": { "$type": "color", "$value": "#0d121a" },
+      "night850": { "$type": "color", "$value": "#111823" },
+      "night800": { "$type": "color", "$value": "#17202c" },
+      "night700": { "$type": "color", "$value": "#253242" },
+      "steel500": { "$type": "color", "$value": "#718195" },
+      "steel300": { "$type": "color", "$value": "#a7b5c5" },
+      "steel100": { "$type": "color", "$value": "#e4ebf2" },
+      "white": { "$type": "color", "$value": "#f7fafc" },
+      "cobalt600": { "$type": "color", "$value": "#1769ff" },
+      "blue500": { "$type": "color", "$value": "#0798f2" },
+      "cyan400": { "$type": "color", "$value": "#16d8e4" },
+      "teal400": { "$type": "color", "$value": "#24d3b5" },
+      "teal500": { "$type": "color", "$value": "#18bda6" },
+      "coral400": { "$type": "color", "$value": "#ff6b70" },
+      "amber400": { "$type": "color", "$value": "#f4b84a" },
+      "green400": { "$type": "color", "$value": "#48d597" }
+    },
+    "typography": {
+      "display": { "$type": "fontFamily", "$value": ["Bahnschrift", "Segoe UI Variable Display", "Segoe UI", "sans-serif"] },
+      "ui": { "$type": "fontFamily", "$value": ["Segoe UI Variable Text", "Segoe UI", "system-ui", "sans-serif"] },
+      "mono": { "$type": "fontFamily", "$value": ["Cascadia Mono", "Consolas", "monospace"] }
+    },
+    "radius": {
+      "control": { "$type": "dimension", "$value": { "value": 6, "unit": "px" } },
+      "panel": { "$type": "dimension", "$value": { "value": 8, "unit": "px" } }
+    },
+    "motion": {
+      "fast": { "$type": "duration", "$value": { "value": 120, "unit": "ms" } },
+      "standard": { "$type": "duration", "$value": { "value": 180, "unit": "ms" } },
+      "deliberate": { "$type": "duration", "$value": { "value": 260, "unit": "ms" } }
+    }
+  }
+}
+

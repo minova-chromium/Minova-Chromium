@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Editable Minova installer panel template">
+  <defs>
+    <linearGradient id="orbit" x1="30" y1="650" x2="870" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1769ff"/>
+      <stop offset=".55" stop-color="#16d8e4"/>
+      <stop offset="1" stop-color="#24d3b5"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" fill="#0d121a"/>
+  <g fill="none" stroke="url(#orbit)" stroke-width="3" opacity=".24">
+    <path d="M-180 610C80 210 540 80 1040 200"/>
+    <path d="M120 840C300 450 690 160 980 40"/>
+  </g>
+  <image href="../assets/minova-lockup-dark.svg" x="70" y="62" width="410" height="116"/>
+  <text x="72" y="320" fill="#16d8e4" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">WELCOME</text>
+  <text x="72" y="386" fill="#f7fafc" font-family="Bahnschrift, Segoe UI, sans-serif" font-size="55" font-weight="700">Your browser is ready</text>
+  <text x="72" y="438" fill="#a7b5c5" font-family="Segoe UI, sans-serif" font-size="23">Install Minova, choose your interface, and make it yours.</text>
+  <rect x="72" y="520" width="246" height="64" rx="8" fill="#16d8e4"/>
+  <text x="122" y="562" fill="#07131c" font-family="Segoe UI, sans-serif" font-size="23" font-weight="700">Install Minova</text>
+  <text x="72" y="642" fill="#718195" font-family="Segoe UI, sans-serif" font-size="17">GPL-3.0 / WINDOWS / MINOVA CHROMIUM</text>
+</svg>
