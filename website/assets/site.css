@@ -1,16 +1,16 @@
 :root {
   color-scheme: dark;
-  --page: #0f1216;
-  --surface: #171b21;
-  --surface-raised: #222832;
-  --surface-soft: #1b222b;
-  --line: #35404c;
-  --line-soft: #28323d;
-  --text: #f5f8fa;
-  --muted: #a2afbc;
-  --accent: #18c7be;
-  --accent-strong: #0ea49d;
-  --blue: #2e77ca;
+  --page: #0d121a;
+  --surface: #111823;
+  --surface-raised: #17202c;
+  --surface-soft: #17202c;
+  --line: #354457;
+  --line-soft: #253242;
+  --text: #f7fafc;
+  --muted: #a7b5c5;
+  --accent: #16d8e4;
+  --accent-strong: #24d3b5;
+  --blue: #1769ff;
   --warning: #f3b34c;
   --danger: #ff6876;
   --success: #43d39e;
@@ -61,6 +61,12 @@ button {
   color: inherit;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Bahnschrift", "Arial Narrow", "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
 button,
 a,
 input,
@@ -107,7 +113,7 @@ textarea {
   top: 0;
   height: var(--header-height);
   border-bottom: 1px solid rgba(71, 84, 99, 0.7);
-  background: rgba(15, 18, 22, 0.94);
+  background: rgba(13, 18, 26, 0.94);
   backdrop-filter: blur(18px);
 }
 
@@ -140,6 +146,19 @@ textarea {
 
 .brand-link span {
   white-space: nowrap;
+}
+
+.ecosystem-link {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ecosystem-link:hover {
+  color: var(--text);
 }
 
 .desktop-navigation {
@@ -199,13 +218,15 @@ textarea {
 }
 
 .button.primary {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: #061918;
+  border-color: transparent;
+  background: linear-gradient(100deg, #1769ff, #0798f2 55%, #16d8e4);
+  color: #f7fafc;
+  box-shadow: 0 12px 32px rgba(7, 152, 242, 0.2);
 }
 
 .button.primary:hover {
-  background: #27d5cb;
+  background: linear-gradient(100deg, #2475ff, #0aa5fb 55%, #24d3b5);
+  box-shadow: 0 16px 38px rgba(7, 152, 242, 0.3);
 }
 
 .button.subtle {
