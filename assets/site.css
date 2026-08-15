@@ -201,6 +201,10 @@ textarea {
   max-width: none;
 }
 
+.product-wordmark img[src$="chromium-wordmark.svg"] {
+  height: 18px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -376,6 +380,22 @@ textarea {
   font-size: clamp(48px, 7vw, 88px);
   font-weight: 720;
   line-height: 0.98;
+}
+
+.hero h1.hero-product-wordmark {
+  width: min(100%, 720px);
+  max-width: 720px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(10px, 1.5vw, 20px);
+  font-size: 0;
+  line-height: 0;
+}
+
+.hero-product-wordmark img {
+  width: 100%;
+  height: auto;
 }
 
 .hero-copy {
@@ -2181,7 +2201,11 @@ textarea {
   }
 
   .product-wordmark img {
-    height: 17px;
+    height: 15px;
+  }
+
+  .product-wordmark img[src$="chromium-wordmark.svg"] {
+    height: 14px;
   }
 
   .header-actions > .button {
