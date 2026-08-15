@@ -32,11 +32,11 @@ unavailable. Publishing a new non-draft GitHub Release with a
 `Minova-Chromium-Setup-<version>.exe` asset does not require another website
 deployment.
 
-## Brand identity
+## Ecosystem navigation
 
-`brand.html` presents the approved Minova visual identity. The complete public
-kit is mirrored under `brand-kit/`, while
-`assets/downloads/Minova-Brand-Kit-2.1.zip` provides one direct download.
+Every published page includes a top-left home icon that returns to the Minova
+main website. Product pages remain focused on Minova Chromium; the ecosystem
+brand guide and downloads are maintained only on Minova Main.
 
 ## Feedback delivery
 
