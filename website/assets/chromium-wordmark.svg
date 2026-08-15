@@ -1,40 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1132 146" role="img" aria-labelledby="title description">
-  <title id="title">Chromium</title>
-  <desc id="description">Heavy geometric Chromium wordmark matched to the Minova letter style.</desc>
-  <defs>
-    <linearGradient id="prism-accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1769ff" />
-      <stop offset="0.55" stop-color="#16d8e4" />
-      <stop offset="1" stop-color="#24d3b5" />
-    </linearGradient>
-  </defs>
-
-  <g fill="#f7fafc">
-    <!-- C: circular construction and open terminals echo the Minova O. -->
-    <path d="M102.3 40.86 A50 50 0 1 0 102.3 105.14" fill="none" stroke="#f7fafc" stroke-width="30" stroke-linecap="butt" />
-
-    <!-- H -->
-    <path d="M158 8h30v50h64V8h30v130h-30V88h-64v50h-30z" />
-
-    <!-- R -->
-    <path d="M327 122V23h49c29 0 46 12 46 34s-17 34-46 34h-49" fill="none" stroke="#f7fafc" stroke-width="30" stroke-linecap="butt" stroke-linejoin="miter" />
-    <path d="m369 78 71 60h-43l-50-47z" />
-
-    <!-- O: the same circular weight and prismatic break used by MINOVA. -->
-    <path d="M574.96 44.32 A50 50 0 1 1 551.1 26.02" fill="none" stroke="#f7fafc" stroke-width="30" stroke-linecap="butt" />
-
-    <!-- M -->
-    <path d="M628 138V8h30l34 41 34-41h30v130h-30V50l-34 40-34-40v88z" />
-
-    <!-- I -->
-    <path d="M786 8h30v130h-30z" />
-
-    <!-- U -->
-    <path d="M861 8v70c0 31 19 52 49 52s49-21 49-52V8" fill="none" stroke="#f7fafc" stroke-width="30" stroke-linecap="butt" />
-
-    <!-- M -->
-    <path d="M1004 138V8h30l34 41 34-41h30v130h-30V50l-34 40-34-40v88z" />
-  </g>
-
-  <path d="M555.13 27.68 A50 50 0 0 1 572.3 40.86" fill="none" stroke="url(#prism-accent)" stroke-width="30" stroke-linecap="butt" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 205 1990 270" role="img" aria-labelledby="title desc">
+  <title id="title">Chromium wordmark</title>
+  <desc id="desc">The user-created white Chromium lettering with a cyan accent in the O.</desc>
+  <image href="chromium-wordmark-user.png" width="2172" height="724" />
 </svg>

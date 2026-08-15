@@ -203,6 +203,7 @@ textarea {
 
 .product-wordmark img[src$="chromium-wordmark.svg"] {
   height: 20px;
+  mix-blend-mode: screen;
 }
 
 .sr-only {
@@ -396,6 +397,10 @@ textarea {
 .hero-product-wordmark img {
   width: 100%;
   height: auto;
+}
+
+.hero-product-wordmark .chromium-wordmark {
+  mix-blend-mode: screen;
 }
 
 .hero-copy {
