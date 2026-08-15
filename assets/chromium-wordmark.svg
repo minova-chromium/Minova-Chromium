@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 628 100" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1132 146" role="img" aria-labelledby="title description">
   <title id="title">Chromium</title>
-  <desc id="description">Geometric Chromium wordmark designed to pair with the Minova identity.</desc>
+  <desc id="description">Heavy geometric Chromium wordmark matched to the Minova letter style.</desc>
   <defs>
     <linearGradient id="prism-accent" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#1769ff" />
@@ -10,30 +10,31 @@
   </defs>
 
   <g fill="#f7fafc">
-    <!-- C -->
-    <path d="M18 8h56l16 16v10H72v-6H28L18 38v24l10 10h44v-6h18v10L74 92H18L0 74V26z" />
+    <!-- C: circular construction and open terminals echo the Minova O. -->
+    <path d="M102.3 40.86 A50 50 0 1 0 102.3 105.14" fill="none" stroke="#f7fafc" stroke-width="30" stroke-linecap="butt" />
 
     <!-- H -->
-    <path d="M100 8h18v33h34V8h18v84h-18V59h-34v33h-18z" />
+    <path d="M158 8h30v50h64V8h30v130h-30V88h-64v50h-30z" />
 
     <!-- R -->
-    <path fill-rule="evenodd" d="M180 8h58l20 18v22l-17 15 37 29h-29l-39-31h-12v31h-18zm18 18v19h34l8-7v-5l-8-7z" />
+    <path d="M327 122V23h49c29 0 46 12 46 34s-17 34-46 34h-49" fill="none" stroke="#f7fafc" stroke-width="30" stroke-linecap="butt" stroke-linejoin="miter" />
+    <path d="m369 78 71 60h-43l-50-47z" />
 
-    <!-- O -->
-    <path fill-rule="evenodd" d="M286 8h38l18 18v48l-18 18h-38l-18-18V26zm7 20-7 7v30l7 7h24l7-7V35l-7-7z" />
+    <!-- O: the same circular weight and prismatic break used by MINOVA. -->
+    <path d="M574.96 44.32 A50 50 0 1 1 551.1 26.02" fill="none" stroke="#f7fafc" stroke-width="30" stroke-linecap="butt" />
 
     <!-- M -->
-    <path d="M352 92V8h18l20 28 20-28h18v84h-18V38l-20 28-20-28v54z" />
+    <path d="M628 138V8h30l34 41 34-41h30v130h-30V50l-34 40-34-40v88z" />
 
     <!-- I -->
-    <path d="M438 8h18v84h-18z" />
+    <path d="M786 8h30v130h-30z" />
 
     <!-- U -->
-    <path d="M466 8h18v58l8 8h24l8-8V8h18v66l-18 18h-40l-18-18z" />
+    <path d="M861 8v70c0 31 19 52 49 52s49-21 49-52V8" fill="none" stroke="#f7fafc" stroke-width="30" stroke-linecap="butt" />
 
     <!-- M -->
-    <path d="M552 92V8h18l20 28 20-28h18v84h-18V38l-20 28-20-28v54z" />
+    <path d="M1004 138V8h30l34 41 34-41h30v130h-30V50l-34 40-34-40v88z" />
   </g>
 
-  <path d="m299 38 9 9-9 15-9-9z" fill="url(#prism-accent)" />
+  <path d="M555.13 27.68 A50 50 0 0 1 572.3 40.86" fill="none" stroke="url(#prism-accent)" stroke-width="30" stroke-linecap="butt" />
 </svg>
