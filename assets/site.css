@@ -2424,3 +2424,4 @@ textarea {
 .project-status strong { display: block; font-size: 18px; }
 .project-status p { margin: 4px 0 0; font-size: 14px; }
 .project-status a { color: #67e0d3; text-decoration: underline; }
+.project-status .project-link { margin-top: 12px; color: #061719; text-decoration: none; }

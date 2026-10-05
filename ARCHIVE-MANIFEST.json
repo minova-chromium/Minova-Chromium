@@ -2397,8 +2397,8 @@
     },
     {
       "path": "assets/site.css",
-      "sha256": "578cdc8273822b8cd44b35740e02cd801fe92582b32cf2057ab5f1fd4d3f4c5a",
-      "bytes": 41292
+      "sha256": "557b92f1bde8affa6e9393fb854deec5ac60a55888430f151d16d14d22638eb9",
+      "bytes": 41383
     },
     {
       "path": "assets/site.js",
@@ -2552,8 +2552,8 @@
     },
     {
       "path": "brand.html",
-      "sha256": "b4178908bb5a87a81c5c43fbab393a20fc4d4077ea161445ca1c679321dd0925",
-      "bytes": 10548
+      "sha256": "3e2f63b8f55aa2f745e911a0798fe158009522a9f1e393eebca4565e21211d37",
+      "bytes": 10770
     },
     {
       "path": "brand/archive/orbital-m-v1/minova-approved-icon-master.png",
@@ -2867,18 +2867,18 @@
     },
     {
       "path": "features.html",
-      "sha256": "0c0dcf34d792f0e1bf40f832ce23bada4609370b5c8fc408090d22c5b8a79b58",
-      "bytes": 23956
+      "sha256": "48133a2458dcaa14f58be050fe0182936531940ce6d03e8c287cb75adc183a4b",
+      "bytes": 24178
     },
     {
       "path": "feedback.html",
-      "sha256": "f63acc5ddf449d4b96b2dada486a48208c11a434f5d1d84dc388a0a5fbc97b94",
-      "bytes": 9241
+      "sha256": "a6bb2555274e5f7e4a2231e57018f32e6c77ce2027e79a2c64186cfcb903477d",
+      "bytes": 9463
     },
     {
       "path": "index.html",
-      "sha256": "46bcd51e9d29eaf8b75b4b38273e08287dacefbe077ba91cf323dbfcea630604",
-      "bytes": 28537
+      "sha256": "65f492dd7e9e8124319f458c9c7870f1f9ab83e74ded7e9c5c9ec442a663bafd",
+      "bytes": 28759
     },
     {
       "path": "installer/MinovaBootstrapper.cs",
@@ -3132,8 +3132,8 @@
     },
     {
       "path": "releases.html",
-      "sha256": "be90a2798ea215a578e769c9e3e9370ee4021caefcc05c1f34fe56dcb9ff0605",
-      "bytes": 12887
+      "sha256": "50cf0fad8dab76ee464547c125de6586ad108069c91d1f3d55c1e3f21878abbc",
+      "bytes": 13109
     },
     {
       "path": "Remove Minova GitHub Token.cmd",
@@ -3787,8 +3787,8 @@
     },
     {
       "path": "videos.html",
-      "sha256": "9870e3e0a25e4333216a1c79c39716857c87e50dc1960a811a70e14ba147a3d3",
-      "bytes": 11817
+      "sha256": "97864c7f7bcf45ec49a892af05c01456e58f743173d6b02edddc168001f49de4",
+      "bytes": 12039
     },
     {
       "path": "website/.nojekyll",
@@ -3942,8 +3942,8 @@
     },
     {
       "path": "website/assets/site.css",
-      "sha256": "578cdc8273822b8cd44b35740e02cd801fe92582b32cf2057ab5f1fd4d3f4c5a",
-      "bytes": 41292
+      "sha256": "557b92f1bde8affa6e9393fb854deec5ac60a55888430f151d16d14d22638eb9",
+      "bytes": 41383
     },
     {
       "path": "website/assets/site.js",
@@ -4097,23 +4097,23 @@
     },
     {
       "path": "website/brand.html",
-      "sha256": "b4178908bb5a87a81c5c43fbab393a20fc4d4077ea161445ca1c679321dd0925",
-      "bytes": 10548
+      "sha256": "3e2f63b8f55aa2f745e911a0798fe158009522a9f1e393eebca4565e21211d37",
+      "bytes": 10770
     },
     {
       "path": "website/features.html",
-      "sha256": "0c0dcf34d792f0e1bf40f832ce23bada4609370b5c8fc408090d22c5b8a79b58",
-      "bytes": 23956
+      "sha256": "48133a2458dcaa14f58be050fe0182936531940ce6d03e8c287cb75adc183a4b",
+      "bytes": 24178
     },
     {
       "path": "website/feedback.html",
-      "sha256": "f63acc5ddf449d4b96b2dada486a48208c11a434f5d1d84dc388a0a5fbc97b94",
-      "bytes": 9241
+      "sha256": "a6bb2555274e5f7e4a2231e57018f32e6c77ce2027e79a2c64186cfcb903477d",
+      "bytes": 9463
     },
     {
       "path": "website/index.html",
-      "sha256": "46bcd51e9d29eaf8b75b4b38273e08287dacefbe077ba91cf323dbfcea630604",
-      "bytes": 28537
+      "sha256": "65f492dd7e9e8124319f458c9c7870f1f9ab83e74ded7e9c5c9ec442a663bafd",
+      "bytes": 28759
     },
     {
       "path": "website/README.md",
@@ -4122,8 +4122,8 @@
     },
     {
       "path": "website/releases.html",
-      "sha256": "be90a2798ea215a578e769c9e3e9370ee4021caefcc05c1f34fe56dcb9ff0605",
-      "bytes": 12887
+      "sha256": "50cf0fad8dab76ee464547c125de6586ad108069c91d1f3d55c1e3f21878abbc",
+      "bytes": 13109
     },
     {
       "path": "website/robots.txt",
@@ -4137,8 +4137,8 @@
     },
     {
       "path": "website/videos.html",
-      "sha256": "9870e3e0a25e4333216a1c79c39716857c87e50dc1960a811a70e14ba147a3d3",
-      "bytes": 11817
+      "sha256": "97864c7f7bcf45ec49a892af05c01456e58f743173d6b02edddc168001f49de4",
+      "bytes": 12039
     }
   ],
   "lastRelease": "v1.0.5",
