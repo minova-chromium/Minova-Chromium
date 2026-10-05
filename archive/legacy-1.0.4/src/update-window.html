@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova Update</title>
+    <link rel="stylesheet" href="./update-window.css" />
+  </head>
+  <body>
+    <main class="window">
+      <header class="titlebar">
+        <div class="titlebar-brand">
+          <img src="../assets/logos/minova-browser.png" alt="" />
+          <span>Minova Update</span>
+        </div>
+        <div class="window-controls">
+          <button type="button" data-action="minimize" class="window-control minimize" title="Minimize" aria-label="Minimize"><span></span></button>
+          <button type="button" data-action="later" class="window-control close" title="Close" aria-label="Close"><span></span></button>
+        </div>
+      </header>
+
+      <section class="update-view" id="readyView">
+        <div class="update-accent" aria-hidden="true"></div>
+        <div class="update-body">
+          <div class="update-heading">
+            <img src="../assets/logos/minova-browser.png" alt="Minova" />
+            <div>
+              <p class="eyebrow">UPDATE READY</p>
+              <h1>Minova <span id="versionText"></span> is ready</h1>
+            </div>
+          </div>
+          <p class="update-intro">The update downloaded quietly while you browsed. Restart Minova to finish installing it.</p>
+          <section class="release-notes" aria-labelledby="releaseNotesTitle">
+            <h2 id="releaseNotesTitle">What's new</h2>
+            <ul id="releaseNotes"></ul>
+          </section>
+          <div class="verified-row">
+            <span class="verified-icon" aria-hidden="true"></span>
+            <span>Downloaded securely from the official Minova release channel</span>
+          </div>
+        </div>
+        <footer class="update-footer">
+          <button type="button" data-action="later" class="secondary-button">Later</button>
+          <button type="button" data-action="update" class="primary-button">
+            <span>Restart and update</span>
+            <i aria-hidden="true"></i>
+          </button>
+        </footer>
+      </section>
+
+      <section class="installing-view hidden" id="installingView" aria-live="polite">
+        <img src="../assets/logos/minova-browser.png" alt="Minova" />
+        <p class="eyebrow">APPLYING UPDATE</p>
+        <h1>Restarting Minova</h1>
+        <p>The update will finish quietly, then Minova will open again.</p>
+        <div class="progress-track"><span></span></div>
+      </section>
+    </main>
+    <script src="./update-window.js"></script>
+  </body>
+</html>

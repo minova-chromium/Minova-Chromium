@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova feedback</title>
+    <link rel="stylesheet" href="./feedback.css?v=minova-1.0.2" />
+  </head>
+  <body>
+    <main class="dialog" aria-labelledby="dialogTitle">
+      <header class="titlebar">
+        <div class="brand">
+          <img src="../assets/logos/minova-browser.png" alt="" />
+          <span>Minova feedback</span>
+        </div>
+        <button class="icon-button" id="closeButton" type="button" title="Close" aria-label="Close">&times;</button>
+      </header>
+
+      <section class="content">
+        <div class="heading">
+          <span class="heading-icon" aria-hidden="true">!</span>
+          <div>
+            <h1 id="dialogTitle">Report a Bug</h1>
+            <p id="dialogDescription">Tell us what happened and how to reproduce it.</p>
+          </div>
+        </div>
+
+        <form id="feedbackForm" novalidate>
+          <label>
+            <span>Email address</span>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required />
+            <small>Used only if the Minova team needs more information.</small>
+          </label>
+
+          <label>
+            <span>Subject</span>
+            <input id="subject" name="subject" type="text" maxlength="120" required />
+          </label>
+
+          <label>
+            <span>Description</span>
+            <textarea id="description" name="description" rows="9" minlength="20" maxlength="5000" required></textarea>
+            <small><output id="characterCount">0</output> / 5,000</small>
+          </label>
+
+          <label class="honeypot" aria-hidden="true">
+            <span>Website</span>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </label>
+
+          <p class="status" id="status" aria-live="polite"></p>
+
+          <footer>
+            <button class="secondary" id="cancelButton" type="button">Cancel</button>
+            <button class="primary" id="sendButton" type="submit">
+              <span class="spinner" aria-hidden="true"></span>
+              <span class="button-label">Send</span>
+            </button>
+          </footer>
+        </form>
+      </section>
+    </main>
+    <script src="./feedback.js?v=minova-1.0.2"></script>
+  </body>
+</html>

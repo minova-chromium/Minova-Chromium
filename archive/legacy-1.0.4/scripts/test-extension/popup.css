@@ -1,0 +1,34 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  width: 290px;
+  margin: 0;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  background: #121923;
+  color: #edf5ff;
+}
+
+img {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+}
+
+span {
+  color: #aebdd1;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+button {
+  min-height: 32px;
+  border: 1px solid #3b4a5f;
+  border-radius: 5px;
+  background: #1e2938;
+  color: inherit;
+}

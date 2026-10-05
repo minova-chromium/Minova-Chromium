@@ -1,0 +1,7 @@
+{
+  "name": "minova-hybrid-browser",
+  "version": "0.1.0",
+  "private": true,
+  "license": "GPL-3.0-only",
+  "description": "Minova's custom browser interface hosted by signed Microsoft Edge."
+}

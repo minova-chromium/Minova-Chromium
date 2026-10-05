@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "Minova Audio Studio",
+  "short_name": "Audio Studio",
+  "version": "1.0.1",
+  "description": "Transparent audio normalization and a protected 10-band parametric EQ for HTML media.",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Minova Audio Studio",
+    "default_popup": "src/popup/index.html",
+    "default_icon": {
+      "16": "icons/minova-audio.png",
+      "32": "icons/minova-audio.png",
+      "48": "icons/minova-audio.png",
+      "128": "icons/minova-audio.png"
+    }
+  },
+  "icons": {
+    "16": "icons/minova-audio.png",
+    "32": "icons/minova-audio.png",
+    "48": "icons/minova-audio.png",
+    "128": "icons/minova-audio.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/content/bootstrap.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/content/index.js",
+        "src/content/audio-engine.js",
+        "src/content/media-observer.js",
+        "src/shared/defaults.js",
+        "src/shared/dsp.js",
+        "src/shared/schema.js",
+        "src/shared/storage.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

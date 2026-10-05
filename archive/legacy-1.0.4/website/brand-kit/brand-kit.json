@@ -1,0 +1,16 @@
+﻿{
+    "name":  "Minova Visual Identity",
+    "edition":  "2.1",
+    "product":  "Minova Chromium",
+    "generatedAt":  "2026-08-12T23:53:09.6744028Z",
+    "authoritativeAssets":  [
+                                "assets/minova-symbol-color.svg",
+                                "assets/minova-wordmark-dark.svg",
+                                "assets/minova-lockup-dark.svg"
+                            ],
+    "taglines":  [
+                     "Shape your own path.",
+                     "The web, shaped around you.",
+                     "Your browser, your way."
+                 ]
+}

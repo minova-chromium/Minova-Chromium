@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova 1.0.2 Installer Preview</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="window" aria-label="Minova installer preview">
+      <header class="titlebar">
+        <div class="titlebar-brand">
+          <img src="../../assets/logos/minova-browser.png" alt="" />
+          <span id="windowTitle">Minova Setup</span>
+        </div>
+        <div class="window-controls" aria-label="Window controls">
+          <button class="window-control minimize" type="button" title="Minimize" aria-label="Minimize"><span></span></button>
+          <button class="window-control close" type="button" title="Close" aria-label="Close"><span></span></button>
+        </div>
+      </header>
+
+      <section class="installer-view" id="installerView">
+        <aside class="brand-panel">
+          <img class="brand-logo" src="../../assets/logos/minova-browser.png" alt="Minova" />
+          <div>
+            <p class="eyebrow">MINOVA CHROMIUM</p>
+            <h1>Browse your way.</h1>
+            <p class="brand-copy">A focused Chromium browser with custom themes, useful privacy controls, and protected streaming.</p>
+          </div>
+          <div class="version-block">
+            <span>Version 1.0.2</span>
+            <small>Windows 10 and 11 · 64-bit</small>
+          </div>
+        </aside>
+
+        <section class="setup-panel" aria-live="polite">
+          <div class="setup-step" id="setupStep">
+            <p class="eyebrow">READY TO INSTALL</p>
+            <h2>Install Minova</h2>
+            <p class="lede">Set up Minova for this Windows account. Your browser data will stay on this device.</p>
+
+            <label class="field-label" for="installPath">Installation folder</label>
+            <div class="path-control">
+              <input
+                id="installPath"
+                type="text"
+                value="C:\Users\DEVELOPER\AppData\Local\Programs\Minova"
+                spellcheck="false"
+              />
+              <button class="secondary-button browse-button" type="button">Browse</button>
+            </div>
+
+            <div class="options" aria-label="Installation options">
+              <label class="check-row">
+                <input type="checkbox" checked />
+                <span class="checkbox-mark" aria-hidden="true"></span>
+                <span>
+                  <strong>Desktop shortcut</strong>
+                  <small>Keep Minova within easy reach.</small>
+                </span>
+              </label>
+              <label class="check-row">
+                <input type="checkbox" checked />
+                <span class="checkbox-mark" aria-hidden="true"></span>
+                <span>
+                  <strong>Start menu shortcut</strong>
+                  <small>Find Minova from Windows Search.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="install-summary">
+              <span>312 MB required</span>
+              <span>Installs for this account</span>
+            </div>
+          </div>
+
+          <div class="progress-step hidden" id="progressStep">
+            <p class="eyebrow">INSTALLING</p>
+            <h2>Making Minova yours</h2>
+            <p class="lede">Minova is being installed. This usually takes less than a minute.</p>
+            <div class="progress-heading">
+              <strong id="progressStatus">Preparing browser files</strong>
+              <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span id="progressFill"></span>
+            </div>
+            <ol class="install-stages">
+              <li class="active" data-stage="prepare"><span></span>Preparing files</li>
+              <li data-stage="install"><span></span>Installing browser</li>
+              <li data-stage="shortcuts"><span></span>Creating shortcuts</li>
+              <li data-stage="finish"><span></span>Final checks</li>
+            </ol>
+            <p class="background-note">You can minimize this window while Minova finishes.</p>
+          </div>
+
+          <div class="complete-step hidden" id="completeStep">
+            <div class="success-mark" aria-hidden="true"><span></span></div>
+            <p class="eyebrow">INSTALLATION COMPLETE</p>
+            <h2>Minova is ready</h2>
+            <p class="lede">Version 1.0.2 is installed and ready for your first tab.</p>
+            <label class="check-row launch-option">
+              <input type="checkbox" checked />
+              <span class="checkbox-mark" aria-hidden="true"></span>
+              <span>
+                <strong>Open Minova now</strong>
+                <small>Start browsing when setup closes.</small>
+              </span>
+            </label>
+          </div>
+
+          <footer class="setup-footer">
+            <a href="#license">GPL-3.0 licensed</a>
+            <div class="footer-actions">
+              <button class="secondary-button" id="cancelButton" type="button">Cancel</button>
+              <button class="primary-button" id="installButton" type="button">
+                <span>Install Minova</span>
+                <i aria-hidden="true"></i>
+              </button>
+            </div>
+          </footer>
+        </section>
+      </section>
+
+      <section class="update-view hidden" id="updateView">
+        <div class="update-accent" aria-hidden="true"></div>
+        <div class="update-body">
+          <div class="update-heading">
+            <img src="../../assets/logos/minova-browser.png" alt="Minova" />
+            <div>
+              <p class="eyebrow">UPDATE READY</p>
+              <h1>Minova 1.0.2 is ready</h1>
+            </div>
+          </div>
+          <p class="update-intro">The update downloaded quietly while you browsed. Restart Minova to finish installing it.</p>
+          <section class="release-notes" aria-labelledby="releaseNotesTitle">
+            <h2 id="releaseNotesTitle">What’s new</h2>
+            <ul>
+              <li><span></span>New polished installer and update experience</li>
+              <li><span></span>Faster startup and smoother tab handling</li>
+              <li><span></span>Reliability fixes across browsing and streaming mode</li>
+            </ul>
+          </section>
+          <div class="verified-row">
+            <span class="verified-icon" aria-hidden="true"></span>
+            <span>Downloaded securely from the official Minova release channel</span>
+          </div>
+        </div>
+        <footer class="update-footer">
+          <button class="secondary-button" type="button">Later</button>
+          <button class="primary-button update-button" type="button">
+            <span>Restart and update</span>
+            <i aria-hidden="true"></i>
+          </button>
+        </footer>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

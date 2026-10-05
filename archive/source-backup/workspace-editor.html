@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova workspace</title>
+    <link rel="stylesheet" href="./workspace-editor.css" />
+  </head>
+  <body>
+    <main class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+      <header class="titlebar">
+        <div class="brand">
+          <img src="../assets/logos/minova-browser.png" alt="" />
+          <span>Minova workspace</span>
+        </div>
+        <button class="icon-button" id="closeButton" type="button" title="Close" aria-label="Close">&times;</button>
+      </header>
+
+      <form id="workspaceForm" novalidate>
+        <div class="heading">
+          <span class="workspace-mark" id="workspaceMark" aria-hidden="true"></span>
+          <div>
+            <h1 id="dialogTitle">New workspace</h1>
+            <p id="dialogDescription">Create a focused place for related tabs.</p>
+          </div>
+        </div>
+
+        <label>
+          <span>Workspace name</span>
+          <input id="workspaceName" type="text" maxlength="24" autocomplete="off" placeholder="e.g. Research" required />
+        </label>
+
+        <label>
+          <span>Workspace color</span>
+          <div class="color-control">
+            <input id="workspaceColor" type="color" value="#18c7be" aria-label="Workspace color" />
+            <output id="workspaceColorValue">#18C7BE</output>
+          </div>
+        </label>
+
+        <p class="status" id="status" role="alert" aria-live="polite"></p>
+
+        <footer>
+          <button class="danger hidden" id="deleteButton" type="button">Delete workspace</button>
+          <span class="footer-spacer"></span>
+          <button class="secondary" id="cancelButton" type="button">Cancel</button>
+          <button class="primary" id="saveButton" type="submit">Create</button>
+        </footer>
+      </form>
+    </main>
+    <script src="./workspace-editor.js"></script>
+  </body>
+</html>

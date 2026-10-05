@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-theme="liquid-glass">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova Liquid Glass Preview</title>
+    <link rel="stylesheet" href="../src/styles.css?v=minova-liquid-glass-2" />
+    <style>
+      .preview-page {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background:
+          linear-gradient(122deg, rgba(25, 110, 183, 0.42), transparent 42%),
+          linear-gradient(302deg, rgba(31, 184, 165, 0.28), transparent 45%),
+          #0b1722;
+      }
+
+      .preview-copy {
+        width: min(760px, calc(100% - 80px));
+        margin: 110px auto 0;
+      }
+
+      .preview-copy h1 {
+        margin: 0 0 12px;
+        font-size: 42px;
+        letter-spacing: 0;
+      }
+
+      .preview-copy p {
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .preview-panel {
+        margin-top: 32px;
+        padding: 24px;
+        border: 1px solid rgba(235, 250, 255, 0.24);
+        border-radius: 18px;
+        background: rgba(37, 68, 84, 0.42);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 24px 56px rgba(0, 6, 12, 0.3);
+        backdrop-filter: blur(30px) saturate(170%);
+      }
+
+      .preview-panel strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .preview-badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        margin-top: 16px;
+        padding: 0 13px;
+        border: 1px solid rgba(235, 250, 255, 0.23);
+        border-radius: 999px;
+        background: rgba(235, 250, 255, 0.1);
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell safari-ui">
+      <header class="titlebar">
+        <div class="window-controls">
+          <button class="window-control close" type="button" aria-label="Close"><span></span></button>
+          <button class="window-control minimize" type="button" aria-label="Minimize"><span></span></button>
+          <button class="window-control maximize" type="button" aria-label="Maximize"><span></span></button>
+        </div>
+      </header>
+
+      <aside class="sidebar" aria-label="Tabs">
+        <div class="sidebar-section-heading tabs-heading">
+          <span>Tabs</span>
+          <button class="sidebar-icon-button" type="button" aria-label="New tab">+</button>
+        </div>
+        <div class="vertical-tab-list" role="tablist">
+          <button class="tab active" role="tab" aria-selected="true">
+            <span class="tab-favicon">M</span><span class="tab-title">Minova Start Page</span><span class="tab-close">x</span>
+          </button>
+          <button class="tab" role="tab">
+            <span class="tab-favicon">N</span><span class="tab-title">News</span><span class="tab-close">x</span>
+          </button>
+          <button class="tab" role="tab">
+            <span class="tab-favicon">D</span><span class="tab-title">Design</span><span class="tab-close">x</span>
+          </button>
+        </div>
+      </aside>
+
+      <nav class="toolbar" aria-label="Browser controls">
+        <button class="icon-button" type="button" aria-label="Back">&#8249;</button>
+        <button class="icon-button" type="button" aria-label="Forward">&#8250;</button>
+        <button class="icon-button" type="button" aria-label="Reload">&#8635;</button>
+        <button class="icon-button" type="button" aria-label="Home">&#8962;</button>
+        <div class="omnibox-wrap">
+          <span class="security-chip">Secure</span>
+          <input value="minova://start" readonly aria-label="Address" />
+        </div>
+        <div class="toolbar-actions">
+          <button class="pinned-extension-button" type="button" aria-label="Extension">A</button>
+          <button class="icon-button" type="button" aria-label="Assistant">AI</button>
+          <button class="icon-button" type="button" aria-label="Settings">&#9881;</button>
+          <button class="icon-button menu-button" type="button" aria-label="Menu"><span></span></button>
+        </div>
+      </nav>
+
+      <main class="content">
+        <section class="preview-page">
+          <div class="preview-copy">
+            <h1>Liquid Glass</h1>
+            <p>A clearer, layered Safari presentation for Minova. Controls catch the light, active tabs float above the rail, and the page remains the visual focus.</p>
+            <div class="preview-panel">
+              <strong>Private, fast, and shaped around you.</strong>
+              <span>Minova keeps its complete browser toolset while the interface gains a lighter material hierarchy.</span>
+              <div class="preview-badge">Minova Chromium</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

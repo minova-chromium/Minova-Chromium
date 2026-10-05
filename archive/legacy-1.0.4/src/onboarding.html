@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Minova</title>
+    <link rel="stylesheet" href="./onboarding.css" />
+  </head>
+  <body>
+    <main class="tour-window">
+      <header class="tour-header">
+        <div class="tour-brand">
+          <img src="../assets/logos/minova-browser.png" alt="" />
+          <div>
+            <strong>Minova</strong>
+            <span>First launch</span>
+          </div>
+        </div>
+        <div class="tour-progress-label" id="progressLabel" aria-live="polite">Welcome</div>
+        <button class="skip-button" id="skipTourButton" type="button">Skip tour</button>
+      </header>
+
+      <div class="tour-layout">
+        <nav class="tour-rail" aria-label="Tour progress">
+          <ol id="tourProgress">
+            <li class="active"><span>1</span><div><strong>Welcome</strong><small>Meet Minova</small></div></li>
+            <li><span>2</span><div><strong>Choose a layout</strong><small>Make it familiar</small></div></li>
+            <li><span>3</span><div><strong>Your workflow</strong><small>Tabs and spaces</small></div></li>
+            <li><span>4</span><div><strong>Power features</strong><small>More from every tab</small></div></li>
+            <li><span>5</span><div><strong>Passwords</strong><small>Bring your logins</small></div></li>
+          </ol>
+          <div class="tour-rail-note">
+            <span class="shield-mark" aria-hidden="true"></span>
+            <p>Your browser data stays in your Minova profile on this PC.</p>
+          </div>
+        </nav>
+
+        <section class="tour-content" id="tourContent" aria-live="polite"></section>
+      </div>
+
+      <footer class="tour-footer">
+        <button class="secondary-button" id="backButton" type="button">Back</button>
+        <div class="step-dots" id="stepDots" aria-hidden="true"></div>
+        <button class="primary-button" id="nextButton" type="button">Continue <span aria-hidden="true">&rarr;</span></button>
+      </footer>
+    </main>
+    <script src="./onboarding.js"></script>
+  </body>
+</html>

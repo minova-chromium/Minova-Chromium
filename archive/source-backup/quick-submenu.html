@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova menu</title>
+    <link rel="stylesheet" href="./quick-submenu.css?v=minova-1.0.2" />
+  </head>
+  <body>
+    <main class="submenu-surface" role="menu" aria-label="History and bookmarks">
+      <header><h1 id="submenuTitle">Recent history</h1></header>
+      <section class="submenu-items" id="submenuItems"></section>
+      <footer>
+        <button type="button" id="manageButton">Show all history</button>
+        <button type="button" class="danger hidden" id="clearHistoryButton">Delete all history</button>
+      </footer>
+    </main>
+    <script src="./quick-submenu.js?v=minova-1.0.2"></script>
+  </body>
+</html>

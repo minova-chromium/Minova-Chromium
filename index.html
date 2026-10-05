@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0d121a" />
+    <meta name="theme-color" content="#0f1216" />
     <meta name="description" content="Minova Chromium is a customizable desktop browser with Classic and Workspace interfaces, vertical tabs, Split View, encrypted passwords, extensions, media tools, and integrated Streaming Mode." />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src https:; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co" />
     <meta property="og:title" content="Minova Chromium" />
@@ -18,18 +18,24 @@
     <script src="./assets/site.js" defer></script>
   </head>
   <body>
+    <aside class="project-status" aria-label="Project status">
+      <div>
+        <strong>Minova Chromium is temporarily discontinued</strong>
+        <p>Development is paused until further notice. Updates and support are paused; existing downloads are archived software. <a href="https://github.com/minova-chromium/Minova-Chromium/blob/main/PROJECT-STATUS.md">Project status and source archive</a></p>
+      </div>
+    </aside>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="header-inner">
-        <a class="ecosystem-home" href="https://minova-chromium.github.io/Minova-Main/" aria-label="Return to Minova home"><span class="home-glyph" aria-hidden="true"></span></a>
         <a class="brand-link" href="./index.html" aria-label="Minova Chromium home">
-          <span class="product-wordmark" aria-hidden="true"><img src="./assets/minova-wordmark-primary.svg" alt="" /><img src="./assets/chromium-wordmark.svg" alt="" /></span>
-          <span class="sr-only">Minova Chromium</span>
+          <img src="./assets/minova-browser.png" alt="" />
+          <span>Minova Chromium</span>
         </a>
         <nav class="desktop-navigation" aria-label="Primary navigation">
           <a class="active" href="./index.html">Home</a>
           <a href="./index.html#watch">Watch</a>
           <a href="./features.html">Features</a>
+          <a href="./brand.html">Brand</a>
           <a href="./videos.html">Videos</a>
           <a href="./releases.html">Releases</a>
           <a href="./feedback.html">Feedback</a>
@@ -53,6 +59,7 @@
       <a class="active" href="./index.html">Home</a>
       <a href="./index.html#watch">Watch</a>
       <a href="./features.html">Features</a>
+      <a href="./brand.html">Brand</a>
       <a href="./videos.html">Videos</a>
       <a href="./releases.html">Releases</a>
       <a href="./feedback.html">Feedback</a>
@@ -67,11 +74,7 @@
         <div class="hero-content">
           <img class="hero-logo" src="./assets/minova-browser.png" alt="" />
           <p class="eyebrow">Chromium, shaped around you</p>
-          <h1 class="hero-product-wordmark" id="hero-title">
-            <span class="sr-only">Minova Chromium</span>
-            <img class="minova-wordmark" src="./assets/minova-wordmark-primary.svg" alt="" aria-hidden="true" />
-            <img class="chromium-wordmark" src="./assets/chromium-wordmark.svg" alt="" aria-hidden="true" />
-          </h1>
+          <h1 id="hero-title">Minova Chromium</h1>
           <p class="hero-copy">Choose vertical workspaces or classic tabs, then shape a fast Chromium browser around the way you browse, work, and stream.</p>
           <div class="hero-actions">
             <a class="button primary" data-download-link href="https://github.com/minova-chromium/Minova-Chromium/releases/download/v1.0.5/Minova-Chromium-Setup-1.0.5.exe">
@@ -166,6 +169,7 @@
               <li><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#check"></use></svg><span>Windows ICO and PNG exports from 16 to 1024 pixels</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#check"></use></svg><span>Reusable CSS and JSON tokens plus release, social, and installer templates</span></li>
             </ul>
+            <p><a class="text-link" href="./brand.html">Open the visual identity <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#arrow-right"></use></svg></a></p>
           </div>
           <figure class="feature-media brand-lockup-shot">
             <img src="./assets/minova-lockup.png" alt="Minova Prism M and custom wordmark" />
@@ -400,11 +404,11 @@
       <div class="footer-inner">
         <div class="footer-top">
           <div class="footer-brand">
-            <a class="brand-link" href="./index.html" aria-label="Minova Chromium home"><span class="product-wordmark" aria-hidden="true"><img src="./assets/minova-wordmark-primary.svg" alt="" /><img src="./assets/chromium-wordmark.svg" alt="" /></span><span class="sr-only">Minova Chromium</span></a>
+            <a class="brand-link" href="./index.html"><img src="./assets/minova-browser.png" alt="" /><span>Minova Chromium</span></a>
             <p>A customizable, privacy-minded Chromium desktop browser built in the open.</p>
           </div>
-          <div class="footer-column"><strong>Explore</strong><a href="./index.html#watch">Watch the latest film</a><a href="./videos.html">Update videos</a><a href="./features.html">Features</a><a data-release-link href="./releases.html">Releases</a></div>
-          <div class="footer-column"><strong>Minova ecosystem</strong><a href="https://minova-chromium.github.io/Minova-Main/">Minova home</a><a href="https://minova-chromium.github.io/Minova-Android-Tv-Cinema-Application/">Minova Cinema</a><a data-repository-link href="#">Source code</a><a href="./feedback.html?type=bug">Report a bug</a><a href="./feedback.html?type=feature">Request a feature</a></div>
+          <div class="footer-column"><strong>Explore</strong><a href="./index.html#watch">Watch the latest film</a><a href="./videos.html">Update videos</a><a href="./features.html">Features</a><a href="./brand.html">Brand identity</a><a data-release-link href="./releases.html">Releases</a></div>
+          <div class="footer-column"><strong>Project</strong><a data-repository-link href="#">Source code</a><a href="./feedback.html?type=bug">Report a bug</a><a href="./feedback.html?type=feature">Request a feature</a></div>
           <div class="footer-column"><strong>Legal</strong><a data-repository-link href="#">GPL-3.0 license</a><a href="mailto:minova.chromium@gmail.com">Contact</a></div>
         </div>
         <div class="footer-bottom"><span>&copy; <span data-current-year></span> Minova Chromium.</span><span>Windows is a trademark of Microsoft Corporation. Minova is an independent project.</span></div>

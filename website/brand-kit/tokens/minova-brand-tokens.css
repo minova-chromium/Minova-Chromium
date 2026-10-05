@@ -1,0 +1,76 @@
+:root {
+  color-scheme: dark;
+
+  /* Core identity */
+  --minova-night-950: #080c12;
+  --minova-night-900: #0d121a;
+  --minova-night-850: #111823;
+  --minova-night-800: #17202c;
+  --minova-night-700: #253242;
+  --minova-steel-500: #718195;
+  --minova-steel-300: #a7b5c5;
+  --minova-steel-100: #e4ebf2;
+  --minova-white: #f7fafc;
+
+  /* Minova spectrum */
+  --minova-cobalt-600: #1769ff;
+  --minova-blue-500: #0798f2;
+  --minova-cyan-400: #16d8e4;
+  --minova-teal-400: #24d3b5;
+  --minova-teal-500: #18bda6;
+
+  /* Functional complements */
+  --minova-coral-400: #ff6b70;
+  --minova-amber-400: #f4b84a;
+  --minova-green-400: #48d597;
+
+  /* Semantic roles */
+  --minova-canvas: var(--minova-night-900);
+  --minova-surface: var(--minova-night-850);
+  --minova-surface-raised: var(--minova-night-800);
+  --minova-border: var(--minova-night-700);
+  --minova-text: var(--minova-white);
+  --minova-text-muted: var(--minova-steel-300);
+  --minova-action: var(--minova-cyan-400);
+  --minova-action-hover: var(--minova-teal-400);
+  --minova-focus: var(--minova-blue-500);
+  --minova-danger: var(--minova-coral-400);
+  --minova-warning: var(--minova-amber-400);
+  --minova-success: var(--minova-green-400);
+
+  /* Typography */
+  --minova-font-display: "Bahnschrift", "Segoe UI Variable Display", "Segoe UI", sans-serif;
+  --minova-font-ui: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --minova-font-mono: "Cascadia Mono", "Consolas", monospace;
+
+  /* Shape and spacing */
+  --minova-radius-control: 6px;
+  --minova-radius-panel: 8px;
+  --minova-space-1: 4px;
+  --minova-space-2: 8px;
+  --minova-space-3: 12px;
+  --minova-space-4: 16px;
+  --minova-space-5: 24px;
+  --minova-space-6: 32px;
+  --minova-space-7: 48px;
+  --minova-space-8: 64px;
+
+  /* Motion */
+  --minova-motion-fast: 120ms;
+  --minova-motion-standard: 180ms;
+  --minova-motion-deliberate: 260ms;
+  --minova-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+[data-minova-theme="light"] {
+  color-scheme: light;
+  --minova-canvas: #d9e0e8;
+  --minova-surface: #e5eaf0;
+  --minova-surface-raised: #eef2f6;
+  --minova-border: #aeb9c6;
+  --minova-text: #131b25;
+  --minova-text-muted: #526174;
+  --minova-action: #087d91;
+  --minova-action-hover: #096d72;
+  --minova-focus: #1769c2;
+}

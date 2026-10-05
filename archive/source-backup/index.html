@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: crx:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova</title>
+    <link rel="stylesheet" href="./styles.css?v=minova-layouts-1" />
+    <link rel="stylesheet" href="./assistant.css?v=minova-assistant-1" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="titlebar">
+        <div class="titlebar-brand">
+          <button class="icon-button sidebar-toggle" id="toggleSidebarButton" title="Collapse sidebar" aria-label="Collapse sidebar"><span aria-hidden="true"></span></button>
+          <img src="../assets/logos/minova-browser.png" alt="" />
+          <strong>Minova</strong>
+        </div>
+        <div class="titlebar-workspace" id="titlebarWorkspaceName">Personal</div>
+        <div class="window-drag"></div>
+        <div class="window-controls">
+          <button class="window-control minimize" id="minimizeWindowButton" title="Minimize" aria-label="Minimize"><span></span></button>
+          <button class="window-control maximize" id="maximizeWindowButton" title="Maximize" aria-label="Maximize"><span></span></button>
+          <button class="window-control close" id="closeWindowButton" title="Close" aria-label="Close"><span></span></button>
+        </div>
+      </header>
+
+      <aside class="sidebar" id="sidebar" aria-label="Workspaces and tabs">
+        <div class="sidebar-section-heading workspace-heading">
+          <span>Workspaces</span>
+          <button class="sidebar-icon-button" id="newWorkspaceButton" type="button" title="New workspace" aria-label="New workspace">+</button>
+        </div>
+        <div class="workspace-list" id="workspaceList" role="tablist" aria-label="Workspaces"></div>
+        <div class="sidebar-section-heading tabs-heading">
+          <span>Tabs</span>
+          <button class="sidebar-icon-button" id="newTabButton" type="button" title="New tab" aria-label="New tab">+</button>
+        </div>
+        <div class="vertical-tab-list" id="tabStrip" role="tablist" aria-label="Open tabs"></div>
+        <footer class="sidebar-footer">
+          <button class="sidebar-command split-view-command" id="splitViewButton" type="button" title="Toggle split view">
+            <span class="split-view-glyph" aria-hidden="true"><i></i></span>
+            <span class="sidebar-command-label">Split view</span>
+          </button>
+          <button class="sidebar-command" id="newPrivateTabButton" type="button" title="New private tab">
+            <span class="private-tab-glyph" aria-hidden="true"><i></i></span>
+            <span class="sidebar-command-label">Private tab</span>
+          </button>
+        </footer>
+      </aside>
+
+      <nav class="toolbar" aria-label="Browser controls">
+        <button class="icon-button streaming-exit-button hidden" id="exitStreamingModeButton" title="Exit Streaming Mode" aria-label="Exit Streaming Mode"><span aria-hidden="true"></span></button>
+        <button class="icon-button" id="backButton" title="Back">‹</button>
+        <button class="icon-button" id="forwardButton" title="Forward">›</button>
+        <button class="icon-button" id="reloadButton" title="Reload">↻</button>
+        <button class="icon-button" id="homeButton" title="Home">⌂</button>
+        <form class="omnibox-wrap" id="navigationForm">
+          <span class="security-chip" id="securityChip">Minova</span>
+          <input id="omnibox" autocomplete="off" spellcheck="false" placeholder="Search or enter web address" role="combobox" aria-autocomplete="list" aria-expanded="false" />
+        </form>
+        <div class="toolbar-actions">
+          <button class="streaming-background-button hidden" id="resumeStreamingModeButton" type="button" title="Resume Streaming Mode" aria-label="Resume Streaming Mode">
+            <span class="streaming-resume-glyph" aria-hidden="true"></span>
+            <span>Resume streaming</span>
+          </button>
+          <button class="icon-button streaming-button" id="streamingModeButton" title="Open in Streaming Mode" aria-label="Open in Streaming Mode"><span aria-hidden="true"><i></i></span></button>
+          <button class="icon-button popout-button" id="popoutButton" title="Picture-in-Picture" aria-label="Picture-in-Picture"><span></span></button>
+          <button class="icon-button" id="bookmarkButton" title="Bookmark">☆</button>
+          <div class="pinned-extensions" id="pinnedExtensions" aria-label="Pinned extensions"></div>
+          <button class="icon-button extensions-button" id="extensionsButton" title="Extensions" aria-label="Extensions"><span class="extension-glyph" aria-hidden="true"><i></i></span></button>
+          <button class="icon-button assistant-button" id="assistantButton" title="Minova Assistant" aria-label="Minova Assistant" aria-pressed="false"><span aria-hidden="true"><i></i></span></button>
+          <button class="icon-button" id="settingsButton" title="Settings">⚙</button>
+          <button class="icon-button volume-button" id="volumeButton" title="Audio Studio" aria-label="Audio Studio"><span aria-hidden="true"><i></i></span></button>
+          <button class="icon-button menu-button" id="mainMenuButton" title="Minova menu" aria-label="Minova menu"><span></span></button>
+        </div>
+        <form class="find-bar hidden" id="findBar" role="search" aria-label="Find in page">
+          <input id="findInput" type="search" autocomplete="off" placeholder="Find in page" aria-label="Find in page" />
+          <output id="findResult" aria-live="polite">0/0</output>
+          <button type="button" id="findPreviousButton" title="Previous match" aria-label="Previous match">&uarr;</button>
+          <button type="button" id="findNextButton" title="Next match" aria-label="Next match">&darr;</button>
+          <button type="button" id="closeFindButton" title="Close find" aria-label="Close find">&times;</button>
+        </form>
+      </nav>
+
+      <div class="browser-menu hidden" id="browserMenu">
+        <button data-menu-action="new-tab"><span>New tab</span><kbd>Ctrl+T</kbd></button>
+        <button data-menu-action="new-private-tab"><span>New private tab</span><kbd>Ctrl+Shift+N</kbd></button>
+        <button data-menu-action="reopen-closed-tab"><span>Reopen closed tab</span><kbd>Ctrl+Shift+T</kbd></button>
+        <button data-menu-action="passwords"><span>Passwords and autofill</span><strong>›</strong></button>
+        <button data-menu-action="history"><span>History</span><kbd>Ctrl+H</kbd></button>
+        <button data-menu-action="downloads"><span>Downloads</span><kbd>Ctrl+J</kbd></button>
+        <button data-menu-action="bookmarks"><span>Bookmarks and lists</span><strong>›</strong></button>
+        <button data-menu-action="extensions"><span>Extensions</span><strong>›</strong></button>
+        <button data-menu-action="clear-data"><span>Delete browsing data...</span><kbd>Ctrl+Shift+Del</kbd></button>
+        <hr />
+        <div class="zoom-menu-row">
+          <span>Zoom</span>
+          <button data-menu-action="zoom-out">-</button>
+          <strong id="menuZoomValue">100%</strong>
+          <button data-menu-action="zoom-in">+</button>
+        </div>
+        <hr />
+        <button data-menu-action="settings"><span>Settings</span></button>
+        <button data-menu-action="exit"><span>Exit</span></button>
+      </div>
+
+      <main class="content">
+        <section class="new-tab-page hidden" id="newTabPage">
+          <div class="brand-block">
+            <img src="../assets/logos/minova-browser.png" alt="Minova" />
+            <h1>Minova</h1>
+            <div class="private-new-tab-notice hidden" id="privateNewTabNotice"><span class="private-tab-glyph" aria-hidden="true"><i></i></span>Private browsing</div>
+          </div>
+          <form class="search-card" id="newTabSearchForm">
+            <input id="newTabSearch" autocomplete="off" placeholder="Search the web" />
+          </form>
+          <div class="quick-links" id="quickLinks"></div>
+        </section>
+        <section class="settings-page hidden" id="settingsPage"></section>
+        <section class="native-view-host" aria-hidden="true"></section>
+        <aside class="web-store-install hidden" id="webStoreInstallBar" aria-live="polite">
+          <div class="web-store-install-icon" aria-hidden="true"><span class="extension-glyph"><i></i></span></div>
+          <div class="web-store-install-copy">
+            <strong>Chrome Web Store</strong>
+            <span id="webStoreInstallStatus">Install this extension in Minova.</span>
+          </div>
+          <button type="button" class="web-store-install-action" id="installWebStoreExtensionButton">Add to Minova</button>
+          <button type="button" class="web-store-install-close" id="closeWebStoreInstallButton" title="Dismiss" aria-label="Dismiss">x</button>
+        </aside>
+      </main>
+
+      <aside class="assistant-sidebar" id="assistantSidebar" aria-label="Minova Assistant" aria-hidden="true">
+        <header class="assistant-header">
+          <div class="assistant-heading">
+            <span class="assistant-mark" aria-hidden="true"><i></i></span>
+            <div>
+              <strong>Minova Assistant</strong>
+              <span><i></i> Local</span>
+            </div>
+          </div>
+          <button class="assistant-icon-control" id="closeAssistantButton" type="button" title="Close assistant" aria-label="Close assistant">&times;</button>
+        </header>
+        <div class="assistant-actions">
+          <button id="summarizePageButton" type="button"><span class="assistant-summary-icon" aria-hidden="true"></span>Summarize Page</button>
+          <button class="assistant-icon-control" id="newAssistantChatButton" type="button" title="New chat" aria-label="New chat"><span class="assistant-new-chat-icon" aria-hidden="true"></span></button>
+        </div>
+        <div class="assistant-messages" id="assistantMessages" role="log" aria-live="polite" aria-label="Assistant conversation"></div>
+        <section class="assistant-engine-status" id="assistantEngineStatus" aria-live="polite">
+          <div>
+            <span class="assistant-status-dot"></span>
+            <strong id="assistantStatusText">Local model is not loaded</strong>
+            <span id="assistantStatusPercent"></span>
+          </div>
+          <div class="assistant-progress-track" aria-hidden="true"><i id="assistantProgressBar"></i></div>
+        </section>
+        <form class="assistant-composer" id="assistantForm">
+          <textarea id="assistantInput" rows="1" maxlength="8000" placeholder="Message Minova Assistant" aria-label="Message Minova Assistant"></textarea>
+          <button class="assistant-send-button" id="assistantSendButton" type="submit" title="Send" aria-label="Send"><span aria-hidden="true"></span></button>
+          <button class="assistant-stop-button hidden" id="assistantStopButton" type="button" title="Stop generating" aria-label="Stop generating"><span aria-hidden="true"></span></button>
+        </form>
+      </aside>
+    </div>
+
+    <div class="toast-host" id="toastHost" aria-live="polite" aria-atomic="true"></div>
+
+    <dialog class="shortcut-dialog" id="shortcutDialog">
+      <form class="shortcut-form" id="shortcutForm">
+        <header>
+          <h2 id="shortcutDialogTitle">Add shortcut</h2>
+          <button type="button" class="dialog-close" id="closeShortcutDialogButton" title="Close" aria-label="Close">x</button>
+        </header>
+        <input type="hidden" id="shortcutId" />
+        <label>
+          <span>Name</span>
+          <input type="text" id="shortcutName" maxlength="32" autocomplete="off" placeholder="Example" required />
+        </label>
+        <label>
+          <span>Website address</span>
+          <input type="text" id="shortcutUrl" autocomplete="off" spellcheck="false" placeholder="https://example.com" required />
+        </label>
+        <p class="shortcut-error" id="shortcutError" role="alert"></p>
+        <footer>
+          <button type="button" class="danger-action hidden" id="deleteShortcutButton">Remove</button>
+          <span></span>
+          <button type="button" class="secondary-action" id="cancelShortcutButton">Cancel</button>
+          <button type="submit" class="primary-action">Save</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <dialog class="shortcut-dialog workspace-dialog" id="workspaceDialog">
+      <form class="shortcut-form" id="workspaceForm">
+        <header>
+          <h2 id="workspaceDialogTitle">New workspace</h2>
+          <button type="button" class="dialog-close" id="closeWorkspaceDialogButton" title="Close" aria-label="Close">x</button>
+        </header>
+        <input type="hidden" id="workspaceId" />
+        <label>
+          <span>Name</span>
+          <input type="text" id="workspaceName" maxlength="24" autocomplete="off" placeholder="Workspace name" required />
+        </label>
+        <label class="workspace-color-field">
+          <span>Color</span>
+          <input type="color" id="workspaceColor" value="#18c7be" />
+        </label>
+        <p class="shortcut-error" id="workspaceError" role="alert"></p>
+        <footer>
+          <button type="button" class="danger-action hidden" id="deleteWorkspaceButton">Remove</button>
+          <span></span>
+          <button type="button" class="secondary-action" id="cancelWorkspaceButton">Cancel</button>
+          <button type="submit" class="primary-action">Save</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <script src="./renderer.js?v=minova-layouts-1"></script>
+  </body>
+</html>

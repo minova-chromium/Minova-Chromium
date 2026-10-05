@@ -1,0 +1,9 @@
+{
+  "name": "minova-audio-studio",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/audio-studio.test.mjs"
+  }
+}

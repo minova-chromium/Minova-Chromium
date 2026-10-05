@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minova Audio Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <img src="../../icons/minova-audio.png" alt="" />
+        <div>
+          <h1>Audio Studio</h1>
+          <p id="runtimeStatus">Checking this page...</p>
+        </div>
+      </div>
+      <label class="switch-control">
+        <span>Enabled</span>
+        <input type="checkbox" id="enabledToggle" />
+        <span class="switch" aria-hidden="true"></span>
+      </label>
+    </header>
+
+    <main>
+      <section class="preset-bar" aria-labelledby="presetHeading">
+        <h2 id="presetHeading">Preset</h2>
+        <select id="presetSelect" aria-label="Audio preset"></select>
+        <input id="presetName" type="text" maxlength="60" placeholder="Preset name" />
+        <button type="button" class="primary-button" id="savePresetButton">Save</button>
+        <button type="button" class="icon-command danger-command" id="deletePresetButton" title="Delete preset" aria-label="Delete preset">
+          <span aria-hidden="true"></span>
+        </button>
+      </section>
+
+      <div class="mode-strip">
+        <label class="check-control">
+          <input type="checkbox" id="bypassToggle" />
+          <span>Bypass processing</span>
+        </label>
+        <span class="headroom-readout" id="headroomReadout">Headroom 0.0 dB</span>
+      </div>
+
+      <section class="tool-section" aria-labelledby="compressorHeading">
+        <div class="section-heading">
+          <div>
+            <h2 id="compressorHeading">Normalizer</h2>
+            <span id="reductionReadout">0.0 dB reduction</span>
+          </div>
+          <label class="switch-control compact">
+            <span>Compressor</span>
+            <input type="checkbox" id="compressorEnabled" />
+            <span class="switch" aria-hidden="true"></span>
+          </label>
+        </div>
+
+        <div class="compressor-grid">
+          <label>
+            <span>Threshold</span>
+            <output id="thresholdOutput"></output>
+            <input type="range" id="thresholdInput" min="-60" max="0" step="1" />
+          </label>
+          <label>
+            <span>Knee</span>
+            <output id="kneeOutput"></output>
+            <input type="range" id="kneeInput" min="0" max="40" step="1" />
+          </label>
+          <label>
+            <span>Ratio</span>
+            <output id="ratioOutput"></output>
+            <input type="range" id="ratioInput" min="1" max="20" step="0.1" />
+          </label>
+          <label>
+            <span>Attack</span>
+            <output id="attackOutput"></output>
+            <input type="range" id="attackInput" min="0" max="0.2" step="0.001" />
+          </label>
+          <label>
+            <span>Release</span>
+            <output id="releaseOutput"></output>
+            <input type="range" id="releaseInput" min="0" max="1" step="0.01" />
+          </label>
+          <label>
+            <span>Makeup</span>
+            <output id="makeupOutput"></output>
+            <input type="range" id="makeupInput" min="0" max="12" step="0.1" />
+          </label>
+        </div>
+      </section>
+
+      <section class="tool-section eq-section" aria-labelledby="eqHeading">
+        <div class="section-heading">
+          <div>
+            <h2 id="eqHeading">Parametric EQ</h2>
+            <span>10 peaking bands</span>
+          </div>
+          <div class="section-toggles">
+            <label class="check-control">
+              <input type="checkbox" id="autoHeadroomToggle" />
+              <span>Auto headroom</span>
+            </label>
+            <label class="switch-control compact">
+              <span>EQ</span>
+              <input type="checkbox" id="eqEnabled" />
+              <span class="switch" aria-hidden="true"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="eq-table">
+          <div class="eq-table-header" aria-hidden="true">
+            <span>Band</span>
+            <span>Frequency</span>
+            <span>Gain</span>
+            <span>Q</span>
+          </div>
+          <div id="eqRows"></div>
+        </div>
+
+        <div class="output-row">
+          <label>
+            <span>Safety margin</span>
+            <input type="number" id="safetyMarginInput" min="0" max="6" step="0.1" />
+            <span>dB</span>
+          </label>
+          <label>
+            <span>Output</span>
+            <input type="range" id="outputGainInput" min="-12" max="12" step="0.1" />
+            <output id="outputGainOutput"></output>
+          </label>
+        </div>
+      </section>
+
+      <p class="message" id="message" role="status" aria-live="polite"></p>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

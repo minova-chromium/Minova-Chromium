@@ -1,0 +1,260 @@
+:root {
+  color-scheme: dark;
+  --bg: #11151b;
+  --surface: #171c24;
+  --surface-alt: #222a35;
+  --border: #384352;
+  --text: #f2f6f8;
+  --muted: #9dabb8;
+  --accent: #18c7be;
+  --danger: #ff6b72;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.dialog {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 46px minmax(0, 1fr);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.62);
+}
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 14px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  -webkit-app-region: drag;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.brand img {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+}
+
+.icon-button {
+  width: 46px;
+  height: 45px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  cursor: default;
+  font-size: 22px;
+  -webkit-app-region: no-drag;
+}
+
+.icon-button:hover {
+  background: color-mix(in srgb, var(--danger) 72%, #5b1118);
+  color: #fff;
+}
+
+form {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto auto auto 20px auto;
+  gap: 14px;
+  padding: 20px 24px 18px;
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.workspace-mark {
+  width: 34px;
+  height: 34px;
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, var(--border));
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 38%, transparent), transparent),
+    var(--surface-alt);
+  box-shadow: inset 4px 0 0 var(--accent);
+}
+
+h1 {
+  margin: 0 0 3px;
+  font-size: 20px;
+  font-weight: 680;
+}
+
+p {
+  margin: 0;
+}
+
+.heading p,
+.status {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  padding: 0 11px;
+}
+
+input[type="text"]:hover {
+  border-color: color-mix(in srgb, var(--border) 55%, var(--text));
+}
+
+input[type="text"]:focus {
+  border-color: var(--accent);
+}
+
+.color-control {
+  height: 40px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+input[type="color"] {
+  width: 50px;
+  height: 40px;
+  padding: 6px 8px;
+  border: 0;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: 0;
+  border-radius: 4px;
+}
+
+output {
+  padding: 0 11px;
+  color: var(--muted);
+  font-family: "Cascadia Mono", Consolas, monospace;
+  font-size: 12px;
+}
+
+.status {
+  min-height: 20px;
+  line-height: 20px;
+}
+
+.status.error {
+  color: var(--danger);
+}
+
+.status.warning {
+  color: color-mix(in srgb, var(--danger) 72%, var(--text));
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer-spacer {
+  flex: 1;
+}
+
+footer button {
+  min-width: 82px;
+  height: 36px;
+  border-radius: 6px;
+  padding: 0 13px;
+  cursor: default;
+  font-weight: 650;
+}
+
+.secondary,
+.danger {
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--text);
+}
+
+.secondary:hover {
+  background: color-mix(in srgb, var(--surface-alt) 78%, var(--text));
+}
+
+.primary {
+  border: 1px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 70%, #073f3c);
+  color: #fff;
+}
+
+.primary:hover {
+  background: color-mix(in srgb, var(--accent) 82%, #073f3c);
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.danger:hover,
+.danger.confirming {
+  border-color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 16%, var(--surface-alt));
+}
+
+.hidden {
+  display: none;
+}

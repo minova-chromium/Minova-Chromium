@@ -1,0 +1,164 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #05070a;
+  color: #edf4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #05070a;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 38px minmax(0, 1fr);
+  border: 1px solid #30394a;
+}
+
+.player-titlebar {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  background: #101620;
+  border-bottom: 1px solid #30394a;
+  -webkit-app-region: drag;
+}
+
+.player-title {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.player-title > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  background: #18c7be;
+  color: #071513;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.player-controls {
+  height: 37px;
+  display: flex;
+  -webkit-app-region: no-drag;
+}
+
+.player-control {
+  width: 42px;
+  height: 37px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #c6d0df;
+  cursor: pointer;
+}
+
+.player-control:hover,
+.player-control.active {
+  background: #202938;
+  color: #ffffff;
+}
+
+.player-control.close:hover {
+  background: #d93025;
+}
+
+.player-control span,
+.player-control span::before,
+.player-control span::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.player-control.minimize span {
+  width: 11px;
+  height: 1px;
+  background: currentColor;
+}
+
+.player-control.close span::before,
+.player-control.close span::after {
+  width: 13px;
+  height: 1px;
+  top: 0;
+  left: -6px;
+  background: currentColor;
+}
+
+.player-control.close span::before {
+  transform: rotate(45deg);
+}
+
+.player-control.close span::after {
+  transform: rotate(-45deg);
+}
+
+.player-control.pin span {
+  width: 10px;
+  height: 10px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.player-control.pin span::after {
+  width: 1px;
+  height: 7px;
+  left: 4px;
+  top: 8px;
+  background: currentColor;
+}
+
+.player-stage {
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  background: #000000;
+}
+
+.player-status {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #05070a;
+  color: #9aa8bd;
+  font-size: 13px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.player-status.hidden {
+  display: none;
+}

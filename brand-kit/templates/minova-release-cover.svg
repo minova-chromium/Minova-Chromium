@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Editable Minova release cover template">
+  <defs>
+    <linearGradient id="orbit" x1="180" y1="910" x2="1770" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1769ff"/>
+      <stop offset=".55" stop-color="#16d8e4"/>
+      <stop offset="1" stop-color="#24d3b5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="#0d121a"/>
+  <g fill="none" stroke="url(#orbit)" stroke-width="4" opacity=".26">
+    <path d="M-220 820C260 230 1190 50 2110 380"/>
+    <path d="M-100 940C420 480 1260 300 2050 520"/>
+    <path d="M420 1260C640 700 1260 230 1790-80"/>
+  </g>
+  <image href="../assets/minova-lockup-dark.svg" x="124" y="114" width="560" height="158"/>
+  <text x="128" y="530" fill="#16d8e4" font-family="Segoe UI, sans-serif" font-size="25" font-weight="700">VERSION 1.0.X</text>
+  <text x="128" y="628" fill="#f7fafc" font-family="Bahnschrift, Segoe UI, sans-serif" font-size="84" font-weight="700">Release title goes here.</text>
+  <text x="128" y="696" fill="#a7b5c5" font-family="Segoe UI, sans-serif" font-size="31">One clear sentence describing the most important improvement.</text>
+  <rect x="128" y="806" width="304" height="66" rx="8" fill="#16d8e4"/>
+  <text x="167" y="849" fill="#07131c" font-family="Segoe UI, sans-serif" font-size="24" font-weight="700">Explore the update</text>
+  <text x="128" y="965" fill="#718195" font-family="Segoe UI, sans-serif" font-size="20">MINOVA CHROMIUM / RELEASE ARTWORK</text>
+</svg>

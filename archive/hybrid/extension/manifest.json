@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Minova Hybrid UI",
+  "version": "0.1.0",
+  "description": "Minova's custom browser interface running inside Microsoft Edge.",
+  "permissions": [
+    "bookmarks",
+    "downloads",
+    "history",
+    "management",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/minova.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/minova.png",
+    "32": "icons/minova.png",
+    "48": "icons/minova.png",
+    "128": "icons/minova.png"
+  }
+}

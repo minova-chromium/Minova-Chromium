@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova YouTube Mini Player</title>
+    <link rel="stylesheet" href="./popout.css?v=native-tabs-20260712-5" />
+  </head>
+  <body>
+    <header class="player-titlebar">
+      <div class="player-title">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span id="playerTitle">YouTube Mini Player</span>
+      </div>
+      <div class="player-controls">
+        <button class="player-control pin active" id="pinButton" type="button" title="Keep above other apps" aria-label="Keep above other apps" aria-pressed="true"><span></span></button>
+        <button class="player-control minimize" id="minimizeButton" type="button" title="Minimize" aria-label="Minimize"><span></span></button>
+        <button class="player-control close" id="closeButton" type="button" title="Close" aria-label="Close"><span></span></button>
+      </div>
+    </header>
+    <main class="player-stage">
+      <div class="player-status" id="playerStatus">Loading video...</div>
+    </main>
+    <script src="./popout.js?v=native-tabs-20260712-5"></script>
+  </body>
+</html>

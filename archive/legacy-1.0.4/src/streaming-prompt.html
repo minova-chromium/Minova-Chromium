@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova Streaming Mode</title>
+    <link rel="stylesheet" href="./streaming-prompt.css?v=minova-1.0.2" />
+  </head>
+  <body>
+    <main class="prompt-surface" role="dialog" aria-labelledby="promptTitle" aria-describedby="promptMessage">
+      <span class="streaming-icon" aria-hidden="true"><i></i></span>
+      <div class="prompt-copy">
+        <strong id="promptTitle">Protected playback available</strong>
+        <p id="promptMessage">This service may work better in Streaming Mode.</p>
+        <small id="promptDetail" hidden></small>
+      </div>
+      <button class="close-button" id="closeButton" type="button" title="Dismiss" aria-label="Dismiss"><span></span></button>
+      <div class="prompt-actions">
+        <button class="secondary-button" id="notNowButton" type="button">Not now</button>
+        <button class="primary-button" id="enterButton" type="button">Enter Streaming Mode</button>
+      </div>
+    </main>
+    <script src="./streaming-prompt.js?v=minova-1.0.2"></script>
+  </body>
+</html>

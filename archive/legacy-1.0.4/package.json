@@ -1,0 +1,88 @@
+{
+  "name": "minova-browser",
+  "version": "1.0.4",
+  "description": "Minova, a privacy-minded Chromium desktop browser with native streaming support.",
+  "main": "src/main.js",
+  "author": "Minova",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "feedback:server": "node server/feedback-service.mjs",
+    "test:unit": "node scripts/minova-1.0-unit.js",
+    "test:features": "node scripts/minova-1.0-features-e2e.js",
+    "test:feedback": "node scripts/minova-feedback-service-e2e.js",
+    "test:streaming": "node scripts/minova-streaming-mode-e2e.js",
+    "test:streaming-tab-close": "node scripts/minova-streaming-tab-close-e2e.js",
+    "test:release": "node scripts/minova-release-e2e.js",
+    "test:update-theme": "node scripts/minova-update-theme-e2e.js",
+    "test:update-window": "node scripts/minova-update-window-e2e.cjs",
+    "test:onboarding": "node scripts/minova-onboarding-e2e.js",
+    "test:assistant": "node scripts/minova-assistant-e2e.js",
+    "test:installer-preview": "node scripts/minova-installer-preview-e2e.cjs",
+    "installer:build": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-updater-release.ps1",
+    "installer:branded": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-branded-installer.ps1",
+    "installer:legacy": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-windows-installer.ps1",
+    "build:assistant": "node scripts/build-assistant-engine.mjs",
+    "brand:export": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File brand/scripts/export-brand-assets.ps1",
+    "pack": "node scripts/build-assistant-engine.mjs && electron-builder --dir",
+    "dist": "node scripts/build-assistant-engine.mjs && electron-builder --win nsis --publish never",
+    "release": "node scripts/build-assistant-engine.mjs && electron-builder --win nsis --publish always",
+    "vmp:sign": "node scripts/vmp-sign.js dist/win-unpacked"
+  },
+  "dependencies": {
+    "@ghostery/adblocker-electron": "^2.18.1",
+    "@mlc-ai/web-llm": "^0.2.84",
+    "cross-fetch": "^4.1.0",
+    "electron-chrome-extensions": "4.9.0",
+    "electron-chrome-web-store": "0.13.0",
+    "electron-updater": "^6.8.9"
+  },
+  "devDependencies": {
+    "electron": "https://github.com/castlabs/electron-releases/archive/refs/tags/v43.0.0%2Bwvcus.tar.gz",
+    "electron-builder": "26.15.3",
+    "esbuild": "^0.28.1"
+  },
+  "build": {
+    "appId": "com.minova.browser",
+    "productName": "Minova",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "minova-chromium",
+        "repo": "Minova-Chromium",
+        "channel": "latest",
+        "publishAutoUpdate": true
+      }
+    ],
+    "electronDist": "node_modules/electron/dist",
+    "afterSign": "scripts/vmp-sign-hook.js",
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "LICENSE",
+      "README.md",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "src/streaming-overlay.ps1"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist/update"
+    },
+    "win": {
+      "icon": "assets/logos/minova.ico",
+      "target": "nsis",
+      "artifactName": "Minova-Chromium-Update-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Minova"
+    }
+  }
+}

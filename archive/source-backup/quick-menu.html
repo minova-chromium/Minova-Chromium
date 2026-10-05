@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minova menu</title>
+    <link rel="stylesheet" href="./quick-menu.css?v=minova-1.0.2" />
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-plus-square" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 12h8M12 8v8"/></symbol>
+      <symbol id="icon-restore-tab" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M9 9h7v7H9z"/></symbol>
+      <symbol id="icon-private" viewBox="0 0 24 24"><path d="M5 11h14l-2-6H7l-2 6Z"/><path d="M3 11h18M4 17a3 3 0 1 0 6 0 3 3 0 0 0-6 0Zm10 0a3 3 0 1 0 6 0 3 3 0 0 0-6 0ZM10 17h4"/></symbol>
+      <symbol id="icon-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15 7l2 2M18 4l2 2"/></symbol>
+      <symbol id="icon-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></symbol>
+      <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2L5.8 21 7 14.2l-5-4.9 6.9-1Z"/></symbol>
+      <symbol id="icon-puzzle" viewBox="0 0 24 24"><path d="M19.4 13.5c.4-.8 1.4-1.2 2.2-.8V8a2 2 0 0 0-2-2h-4.3a2 2 0 1 0-3.6 0H7.4a2 2 0 0 0-2 2v4.3a2 2 0 1 0 0 3.6V20a2 2 0 0 0 2 2H12c-.4-.8 0-1.8.8-2.2a2 2 0 1 1 1.7 0c.8.4 1.2 1.4.8 2.2h4.3a2 2 0 0 0 2-2v-4.7c-.8.4-1.8 0-2.2-.8a2 2 0 0 1 0-1Z"/></symbol>
+      <symbol id="icon-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 15H6L5 6M10 11v6M14 11v6"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.4-4.4"/></symbol>
+      <symbol id="icon-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></symbol>
+      <symbol id="icon-streaming" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="m10 9 5 2.5-5 2.5V9ZM9 21h6"/></symbol>
+      <symbol id="icon-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 1 1 4.8 2.4c-1.4 1-1.9 1.6-1.9 2.6M12 18h.01"/></symbol>
+      <symbol id="icon-bug" viewBox="0 0 24 24"><path d="M8 9h8v7a4 4 0 0 1-8 0V9ZM9 5l1.5 2M15 5l-1.5 2M4 13h4M16 13h4M5 8l3 2M19 8l-3 2M5 18l3-2M19 18l-3-2"/></symbol>
+      <symbol id="icon-lightbulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M8.5 15.5A7 7 0 1 1 15.5 15.5C14.6 16.2 14 17 14 18h-4c0-1-.6-1.8-1.5-2.5Z"/></symbol>
+      <symbol id="icon-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3V2.8h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"/></symbol>
+      <symbol id="icon-update" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-14.9 4M4 12A8 8 0 0 1 18.9 8"/><path d="M5 20v-4h4M19 4v4h-4"/></symbol>
+      <symbol id="icon-exit" viewBox="0 0 24 24"><path d="M10 17l5-5-5-5M15 12H3M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></symbol>
+      <symbol id="icon-fullscreen" viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    </svg>
+
+    <main class="menu-surface" role="menu" aria-label="Minova menu">
+      <section class="menu-section compact">
+        <button class="menu-command" type="button" data-action="new-tab" role="menuitem">
+          <svg><use href="#icon-plus-square"/></svg><span>New tab</span><kbd>Ctrl+T</kbd>
+        </button>
+        <button class="menu-command" type="button" data-action="new-private-tab" role="menuitem">
+          <svg><use href="#icon-private"/></svg><span>New private tab</span><kbd>Ctrl+Shift+N</kbd>
+        </button>
+        <button class="menu-command" type="button" data-action="reopen-closed-tab" role="menuitem">
+          <svg><use href="#icon-restore-tab"/></svg><span>Reopen closed tab</span><kbd>Ctrl+Shift+T</kbd>
+        </button>
+      </section>
+
+      <div class="menu-separator"></div>
+
+      <section class="menu-section">
+        <button class="profile-command" type="button" data-action="passwords" role="menuitem">
+          <img src="../assets/logos/minova-browser.png" alt="" />
+          <span><strong>Minova profile</strong><small>Local browser profile</small></span>
+          <svg><use href="#icon-chevron"/></svg>
+        </button>
+      </section>
+
+      <section class="menu-section compact">
+        <button class="menu-command" type="button" data-action="passwords" role="menuitem"><svg><use href="#icon-key"/></svg><span>Passwords and autofill</span><svg class="trailing"><use href="#icon-chevron"/></svg></button>
+        <button class="menu-command" type="button" data-action="history" role="menuitem"><svg><use href="#icon-history"/></svg><span>History</span><kbd>Ctrl+H</kbd></button>
+        <button class="menu-command" type="button" data-action="downloads" role="menuitem"><svg><use href="#icon-download"/></svg><span>Downloads</span><kbd>Ctrl+J</kbd></button>
+        <button class="menu-command" type="button" data-action="bookmarks" role="menuitem"><svg><use href="#icon-star"/></svg><span>Bookmarks and lists</span><svg class="trailing"><use href="#icon-chevron"/></svg></button>
+        <button class="menu-command" type="button" data-action="extensions" role="menuitem"><svg><use href="#icon-puzzle"/></svg><span>Extensions</span><svg class="trailing"><use href="#icon-chevron"/></svg></button>
+        <button class="menu-command" type="button" data-action="clear-data" role="menuitem"><svg><use href="#icon-trash"/></svg><span>Delete browsing data...</span><kbd>Ctrl+Shift+Del</kbd></button>
+      </section>
+
+      <div class="menu-separator"></div>
+
+      <section class="zoom-command" aria-label="Page zoom">
+        <svg><use href="#icon-search"/></svg><span>Zoom</span>
+        <button type="button" class="round-command" data-action="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+        <output id="zoomValue">100%</output>
+        <button type="button" class="round-command" data-action="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+        <button type="button" class="round-command icon-only" data-action="fullscreen" title="Full screen" aria-label="Full screen"><svg><use href="#icon-fullscreen"/></svg></button>
+      </section>
+
+      <div class="menu-separator"></div>
+
+      <section class="menu-section compact">
+        <button class="menu-command" type="button" data-action="streaming-mode" role="menuitem"><svg><use href="#icon-streaming"/></svg><span>Open in Streaming Mode</span></button>
+        <button class="menu-command" type="button" data-action="print" role="menuitem"><svg><use href="#icon-printer"/></svg><span>Print...</span><kbd>Ctrl+P</kbd></button>
+        <button class="menu-command" type="button" data-action="find" role="menuitem"><svg><use href="#icon-search"/></svg><span>Find in page...</span><kbd>Ctrl+F</kbd></button>
+        <button class="menu-command" type="button" data-action="developer-tools" role="menuitem"><svg><use href="#icon-code"/></svg><span>Developer tools</span><kbd>Ctrl+Shift+I</kbd></button>
+      </section>
+
+      <div class="menu-separator"></div>
+
+      <section class="menu-section compact">
+        <button class="menu-command" type="button" data-action="report-bug" role="menuitem"><svg><use href="#icon-bug"/></svg><span>Report a Bug</span></button>
+        <button class="menu-command" type="button" data-action="request-feature" role="menuitem"><svg><use href="#icon-lightbulb"/></svg><span>Request a Feature</span></button>
+      </section>
+
+      <div class="menu-separator"></div>
+
+      <section class="menu-section compact">
+        <button class="menu-command" type="button" data-action="help" role="menuitem"><svg><use href="#icon-help"/></svg><span>Help</span><svg class="trailing"><use href="#icon-chevron"/></svg></button>
+        <button class="menu-command" type="button" data-action="check-updates" role="menuitem"><svg><use href="#icon-update"/></svg><span>Check for updates</span></button>
+        <button class="menu-command" type="button" data-action="settings" role="menuitem"><svg><use href="#icon-settings"/></svg><span>Settings</span></button>
+        <button class="menu-command danger" type="button" data-action="exit" role="menuitem"><svg><use href="#icon-exit"/></svg><span>Exit</span></button>
+      </section>
+    </main>
+    <script src="./quick-menu.js?v=minova-1.0.2"></script>
+  </body>
+</html>
