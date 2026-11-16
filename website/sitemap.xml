@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://minova-chromium.github.io/Minova-Chromium/</loc></url>
-  <url><loc>https://minova-chromium.github.io/Minova-Chromium/features.html</loc></url>
-  <url><loc>https://minova-chromium.github.io/Minova-Chromium/videos.html</loc></url>
-  <url><loc>https://minova-chromium.github.io/Minova-Chromium/releases.html</loc></url>
-  <url><loc>https://minova-chromium.github.io/Minova-Chromium/feedback.html</loc></url>
+  <url><loc>https://chromium.project-minova.com/</loc></url>
+  <url><loc>https://chromium.project-minova.com/features.html</loc></url>
+  <url><loc>https://chromium.project-minova.com/videos.html</loc></url>
+  <url><loc>https://chromium.project-minova.com/releases.html</loc></url>
+  <url><loc>https://chromium.project-minova.com/feedback.html</loc></url>
 </urlset>
